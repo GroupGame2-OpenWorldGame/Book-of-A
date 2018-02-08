@@ -401,7 +401,8 @@ public class GameDriver : MonoBehaviour {
 		//string xmlString = xmlDialogue.text;
 
 		Assembly assem = Assembly.GetExecutingAssembly ();
-		XDocument xDoc = XDocument.Load (UnityEngine.Application.dataPath + xmlDialoguePath);
+		TextAsset xmlDialogueAsset = (TextAsset)Resources.Load (xmlDialoguePath);
+		XDocument xDoc = XDocument.Parse(xmlDialogueAsset.text);
 
 		DialogueHead dialogue = new DialogueHead();
 		//Debug.Log (xDoc.Element("NPCName").Value);
