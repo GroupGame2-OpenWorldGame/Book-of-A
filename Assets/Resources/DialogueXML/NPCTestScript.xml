@@ -1,0 +1,38 @@
+<DialogueHead>
+	<NPCName>Charlie</NPCName>
+	<FirstLineId>1</FirstLineId>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>1</Id>
+		<CheckType>OR</CheckType>
+		<ConditionsToCheck>
+			<value>TalkedToCharlie</value>
+		</ConditionsToCheck>
+		<TrueLineId>3</TrueLineId>
+		<FalseLineId>2</FalseLineId>>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>2</Id>
+		<Speaker>Charlie</Speaker>
+		<Text>Hello there, stranger.</Text>
+		<NextLineId>4</NextLineId>
+		<SetWhenDone>TalkedToCharlie</SetWhenDone>
+		<SetType>true</SetType>>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>3</Id>
+		<Speaker>Charlie</Speaker>
+		<Text>Hello again, prick.</Text>
+		<NextLineId>4</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>4</Id>
+		<Speaker>Charlie</Speaker>
+		<Text>People may say different things after you have talked to them.</Text>
+		<NextLineId>5</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>5</Id>
+		<Speaker>Player</Speaker>
+		<Text>Thanks, nerd!</Text>
+	</DialogueElement>
+</DialogueHead>
