@@ -12,7 +12,6 @@ public class TriggerEnter : MonoBehaviour {
 		if (other.gameObject.tag == "NPC") {
 			theNPC.waiting = true;
 		}
-		Debug.Log ("Enter " + other.gameObject.name);
 	}
 
 //	void OnTriggerExit (Collider other)

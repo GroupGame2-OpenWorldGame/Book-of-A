@@ -12,7 +12,6 @@ public class SpotPlayer : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 			theNPC.seePlayer = true;
 		}
-		Debug.Log ("Enter " + other.gameObject.name);
 	}
 
 	void OnTriggerExit (Collider other)
@@ -21,6 +20,5 @@ public class SpotPlayer : MonoBehaviour {
 			theNPC.seePlayer = false;
 			theNPC.waiting = true;
 		}
-		Debug.Log ("Exit " + other.name);
 	}
 }
