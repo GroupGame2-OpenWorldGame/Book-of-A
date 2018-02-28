@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Animations;
 
 public class Attack : MonoBehaviour {
 
@@ -15,6 +16,9 @@ public class Attack : MonoBehaviour {
 	private float attackSpeed;
 	private float attackingTime;
 	private bool isAttacking;
+
+	[SerializeField]
+	private Animator swordAnim;
 
 	public AttackTrigger theAT;
 
@@ -52,6 +56,12 @@ public class Attack : MonoBehaviour {
 					isAttacking = false;
 					canAttack = false;
 					attackingTime = attackSpeed;
+				}
+
+				if (isAttacking) {
+					swordAnim.SetBool ("attacking", true);
+				} else {
+					swordAnim.SetBool ("attacking", false);
 				}
 			}
 		}
