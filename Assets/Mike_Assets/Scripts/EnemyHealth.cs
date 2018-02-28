@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour {
 	private float currentHealth;
 	[SerializeField]
 	private GameObject enemy;
+	[SerializeField]
+	private GameObject effect;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +19,7 @@ public class EnemyHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
+//			Instantiate (effect, transform.position,transform.rotation).SetActive(true);
 			enemy.SetActive (false);
 		}
 	}
