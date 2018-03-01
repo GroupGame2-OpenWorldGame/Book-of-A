@@ -6,11 +6,28 @@ public class TriggerEnter : MonoBehaviour {
 
 	[SerializeField]
 	private NPCMove theNPC;
+	[SerializeField]
+	private GameObject target;
+	[SerializeField]
+	private GameObject thisGO;
+
+	void Start()
+	{
+		thisGO = this.gameObject;
+	}
+
+	void Update()
+	{
+		target = theNPC.thisIsTriggerTarget;
+	}
 
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "NPC") {
-			theNPC.waiting = true;
+			if (thisGO == target) {
+				theNPC.waiting = true;
+			}
+//			theNPC.waiting = true;
 		}
 	}
 
