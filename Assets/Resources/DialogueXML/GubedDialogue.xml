@@ -1,0 +1,111 @@
+<DialogueHead>
+	<NPCName>Gubed</NPCName>
+	<FirstLineId>1</FirstLineId>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>1</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>TestQuestDone</value>
+		</ConditionsToCheck>
+		<TrueLineId>10</TrueLineId>
+		<FalseLineId>2</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>2</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>TalkedToGubed</value>
+		</ConditionsToCheck>
+		<TrueLineId>4</TrueLineId>
+		<FalseLineId>3</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>3</Id>
+		<Speaker>Gubed</Speaker>
+		<Text>Hey, you're doing a quest now.</Text>
+		<SetWhenDone>
+			<value>TalkedToGubed</value>
+			<value>Test Quest</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>quest,InProgress</value>
+		</SetType>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>4</Id>
+		<Speaker>Gubed</Speaker>
+		<Text>Hey there adventurer!</Text>
+		<NextLineId>5</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueOption">
+		<Id>5</Id>
+		<Speaker>Gubed</Speaker>
+		<Text>Say "I'm stupid" to pass the quest.</Text>
+		<Options>
+			<value>I'm stupid</value>
+			<value>No</value>
+		</Options>
+		<DecisionLineIds>
+			<value>6</value>
+			<value>8</value>
+		</DecisionLineIds>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>6</Id>
+		<Speaker>Player</Speaker>
+		<Text>I'm stupid</Text>
+		<NextLineId>7</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>7</Id>
+		<Speaker>Gubed</Speaker>
+		<Text>You passed the test!</Text>
+		<SetWhenDone>
+			<value>TestQuestDone</value>
+			<value>Test Quest</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>quest,Success</value>
+		</SetType>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>8</Id>
+		<Speaker>Player</Speaker>
+		<Text>No.</Text>
+		<NextLineId>9</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>9</Id>
+		<Speaker>Gubed</Speaker>
+		<Text>Then that means you fail, pal.</Text>
+		<SetWhenDone>
+			<value>TestQuestDone</value>
+			<value>Test Quest</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>quest,Failed</value>
+		</SetType>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>10</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>TestQuestSuccess</value>
+		</ConditionsToCheck>
+		<TrueLineId>11</TrueLineId>
+		<FalseLineId>12</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>11</Id>
+		<Speaker>Gubed</Speaker>
+		<Text>Go forth, for great Justice!</Text>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>12</Id>
+		<Speaker>Gubed</Speaker>
+		<Text>May you succeed in another life.</Text>
+	</DialogueElement>
+</DialogueHead>

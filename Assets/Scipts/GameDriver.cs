@@ -14,10 +14,16 @@ using UnityEngine.EventSystems;
 
 public enum GameState{
 	OverWorld,
-	Dialogue
+	Dialogue,
+	QuestMenu
 }
 
+//TODO: Set Cursor LockStates later
+
 public class GameDriver : MonoBehaviour {
+
+	private static GameDriver instance;
+
 
 	[Header("Game State")]
 	public GameState gameState = GameState.OverWorld;
@@ -32,6 +38,10 @@ public class GameDriver : MonoBehaviour {
 	public Image npcImage;
 	public float optionY = 136f;
 	[Space(8)]
+
+	[Header("Quests")]
+	public string questListPath;
+	public UIQuestList questMenu;
 
 	[Header("Testing")]
 	public string playerName = "Mel";
@@ -55,19 +65,51 @@ public class GameDriver : MonoBehaviour {
 	private DialogueElement currentLine;
 	private PlayerController player;
 
+	private QuestList questList;
+	private List<Quest> questsUnlocked;
+	private List<Quest> questsInProgress;
+	private List<Quest> questsCompleted;
+
+	public static GameDriver Instance{
+		get{
+			if (instance == null) {
+				instance = FindObjectOfType<GameDriver> ();
+				if (instance == null) {
+					var newGD = new GameObject ();
+					newGD.name = "GameDriver";
+					instance = newGD.AddComponent<GameDriver> ();
+					DontDestroyOnLoad (instance.gameObject);
+				}
+			}
+			return instance;
+		}
+	}
+
 	// Use this for initialization
-	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
+	void Awake () {
+		Cursor.visible = false;
+		if (instance != null) {
+			Destroy (this.gameObject);
+		} else {
+			instance = this;
+			DontDestroyOnLoad (this.gameObject);
+			flags = new Dictionary<string, bool>();
 
-		flags = new Dictionary<string, bool>();
+			for( int i = 0; i < flagNames.Length; i++){
+				flags.Add(flagNames[i], false);
+			}
 
-		for( int i = 0; i < flagNames.Length; i++){
-			flags.Add(flagNames[i], false);
+			optionButtons = optionsBox.GetComponentsInChildren<Button> ();
+			CleanUpOptions ();
+			dialogueBox.SetActive (false);
+
+			questList = DeserializeQuestListLinq (questListPath);
+			questsUnlocked = new List<Quest> ();
+			questsInProgress = new List<Quest> ();
+			questsCompleted = new List<Quest> ();
 		}
 
-		optionButtons = optionsBox.GetComponentsInChildren<Button> ();
-		CleanUpOptions ();
-		dialogueBox.SetActive (false);
+		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
 	}
 	
 	// Update is called once per frame
@@ -84,12 +126,28 @@ public class GameDriver : MonoBehaviour {
 		}
 	}
 
+	public List<Quest> QuestsUnlocked{
+		get{ return questsUnlocked; }
+	}
+
 	/*
 	public int DialogueLength{
 		get{ return currentDialogue.Length; }
 		set { currentDialogue.Length = value; }
 	}
 	*/
+
+	public void OpenQuestMenu(){
+		player.SetMovement (false);
+		gameState = GameState.QuestMenu;
+		questMenu.ShowQuestList ();
+	}
+
+	public void CloseQuestMenu(){
+		player.SetMovement (true);
+		gameState = GameState.OverWorld;
+		questMenu.CloseMenu ();
+	}
 
 	public void StartDialogue(){
 		gameState = GameState.Dialogue;
@@ -209,8 +267,14 @@ public class GameDriver : MonoBehaviour {
 		
 	public void AdvanceDialogue(){
 		if (currentLine is DialogueLine) {
-			if (currentLine.SetWhenDone != null) {
-				SetFlag (currentLine.SetWhenDone, currentLine.SetType);
+			if (currentLine.SetWhenDone != null && currentLine.SetWhenDone.Length != 0) {
+				for (int i = 0; i < currentLine.SetWhenDone.Length; i++) {
+					if (currentLine.SetType [i].Contains ("quest")) {
+						SetQuest (currentLine.SetWhenDone [i], currentLine.SetType [i].Split (',') [1]);
+					} else if (currentLine.SetType [i].Contains ("flag")) {
+						SetFlag (currentLine.SetWhenDone[i], currentLine.SetType[i].Split(',')[1]);
+					}
+				}
 				currentLine.TriggerPassed = true;
 			}
 			DialogueLine line = (DialogueLine)currentLine;
@@ -240,6 +304,38 @@ public class GameDriver : MonoBehaviour {
 		}
 	}
 
+	public void SetQuest(string name, string setType){
+		foreach (Quest q in questList.Quests) {
+			if (q.Name == name) {
+				if (setType == "InProgress") {
+					QuestsUnlocked.Add (q);
+					q.Status = "InProgress";
+					return;
+				} else if (setType == "Failed"){
+					questsCompleted.Add(q);
+					q.Status = "Failed";
+					if (q.SetWhenFailed != null) {
+						for (int i = 0; i < q.SetWhenFailed.Length; i++) {
+							SetFlag (q.SetWhenFailed [i], q.SetFailedType [i]);
+						}
+					}
+					return;
+				}else if(setType == "Success"){
+					questsCompleted.Add(q);
+					q.Status = "Success";
+					if (q.SetWhenPassed != null) {
+						for (int i = 0; i < q.SetWhenPassed.Length; i++) {
+							SetFlag (q.SetWhenPassed [i], q.SetPassedType [i]);
+						}
+					}
+				}
+				return;
+			}
+		}
+		Debug.Log ("ERROR: Quest not found");
+		return;
+	}
+		
 	public bool CheckConditions(string[] flagsToCheck, string checkType){
 		if (checkType.Equals ("OR")) {
 			return IsOneFlagTrue (flagsToCheck);
@@ -444,5 +540,49 @@ public class GameDriver : MonoBehaviour {
 		}).ToArray();
 
 		return dialogue;
+	}
+
+	public QuestList DeserializeQuestListLinq(string xmlQuestListPath){
+		//string xmlString = xmlDialogue.text;
+
+		Assembly assem = Assembly.GetExecutingAssembly ();
+		TextAsset xmlDialogueAsset = (TextAsset)Resources.Load (xmlQuestListPath);
+		XDocument xDoc = XDocument.Parse(xmlDialogueAsset.text);
+
+		QuestList qL = new QuestList ();
+		qL.Quests = xDoc.Descendants("Quest").Select(element => {
+			var type = assem.GetTypes().Where(t => t.Name == "Quest").First();
+			Quest e = new Quest();
+			Debug.Log("pass 0");
+			foreach(var property in element.Descendants()){
+				if(property.Name != "value"){
+					var setProp = type.GetProperty(property.Name.LocalName);
+					if(setProp.PropertyType.IsArray){
+						Debug.Log("Pass 1");
+						if(setProp.Name.Contains("Id")){
+							int[] i = property.Descendants("value").Select(v => {return Int32.Parse(v.Value);}).ToArray();
+							Debug.Log(i);
+							setProp.SetValue(e, i, null);
+						}
+						else {
+							string[] s = property.Descendants("value").Select(v => v.Value).ToArray();
+							setProp.SetValue(e, s, null);
+							Debug.Log("Pass 2");
+						}
+					}
+					else {
+						if(setProp.Name.Contains("Id")){
+							setProp.SetValue(e, Int32.Parse(property.Value), null);
+						}
+						else {
+							setProp.SetValue(e, property.Value, null);
+						}
+					}
+				}
+			}
+			return e;
+		}).ToArray();
+
+		return qL;
 	}
 }

@@ -8,15 +8,19 @@
 			<value>TalkedToVincent</value>
 		</ConditionsToCheck>
 		<TrueLineId>14</TrueLineId>
-		<FalseLineId>2</FalseLineId>>
+		<FalseLineId>2</FalseLineId>
 	</DialogueElement>
 	<DialogueElement Type="DialogueLine">
 		<Id>2</Id>
 		<Speaker>Vincent</Speaker>
 		<Text>Hey there.</Text>
 		<NextLineId>3</NextLineId>
-		<SetWhenDone>TalkedToVincent</SetWhenDone>
-		<SetType>true</SetType>
+		<SetWhenDone>
+			<value>TalkedToVincent</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+		</SetType>
 	</DialogueElement>
 	<DialogueElement Type="DialogueLine">
 		<Id>14</Id>
