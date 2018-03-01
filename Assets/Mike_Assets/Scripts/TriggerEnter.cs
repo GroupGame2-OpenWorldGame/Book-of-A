@@ -16,26 +16,13 @@ public class TriggerEnter : MonoBehaviour {
 		thisGO = this.gameObject;
 	}
 
-	void Update()
-	{
-		target = theNPC.thisIsTriggerTarget;
-	}
-
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "NPC") {
+			target = theNPC.thisIsTriggerTarget;
 			if (thisGO == target) {
 				theNPC.waiting = true;
 			}
-//			theNPC.waiting = true;
 		}
 	}
-
-//	void OnTriggerExit (Collider other)
-//	{
-//		if (other.CompareTag("NPC")) {
-//			this.gameObject.tag = "PatrolPoint";
-//		}
-//		Debug.Log ("Exit " + other.name);
-//	}
 }
