@@ -1,0 +1,105 @@
+<DialogueHead>
+	<NPCName>Vincent</NPCName>
+	<FirstLineId>1</FirstLineId>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>1</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>TalkedToVincent</value>
+		</ConditionsToCheck>
+		<TrueLineId>14</TrueLineId>
+		<FalseLineId>2</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>2</Id>
+		<Speaker>Vincent</Speaker>
+		<Text>Hey there.</Text>
+		<NextLineId>3</NextLineId>
+		<SetWhenDone>
+			<value>TalkedToVincent</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+		</SetType>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>14</Id>
+		<Speaker>Vincent</Speaker>
+		<Text>Hi again.</Text>
+		<NextLineId>3</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>3</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>TalkedToCharlie</value>
+		</ConditionsToCheck>
+		<TrueLineId>4</TrueLineId>
+		<FalseLineId>7</FalseLineId>>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>4</Id>
+		<Speaker>Vincent</Speaker>
+		<Text>Have you talked to Charlie?</Text>
+		<NextLineId>5</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>5</Id>
+		<Speaker>Player</Speaker>
+		<Text>Yep. He's a nerd.</Text>
+		<NextLineId>6</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>6</Id>
+		<Speaker>Vincent</Speaker>
+		<Text>He sure is!</Text>
+	</DialogueElement>
+	<DialogueElement Type="DialogueOption">
+		<Id>7</Id>
+		<Speaker>Vincent</Speaker>
+		<Text>Have you talked to Charlie?</Text>
+		<Options>
+			<value>Yes</value>
+			<value>No</value>
+			<value>Who?</value>
+		</Options>
+		<DecisionLineIds>
+			<value>8</value>
+			<value>10</value>
+			<value>12</value>
+		</DecisionLineIds>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>8</Id>
+		<Speaker>Player</Speaker>
+		<Text>Sure did, friendo.</Text>
+		<NextLineId>9</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>9</Id>
+		<Speaker>Vincent</Speaker>
+		<Text>No you didn't you liar!</Text>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>10</Id>
+		<Speaker>Player</Speaker>
+		<Text>Nope.</Text>
+		<NextLineId>11</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>11</Id>
+		<Speaker>Vincent</Speaker>
+		<Text>Well get to it.</Text>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>12</Id>
+		<Speaker>Player</Speaker>
+		<Text>Who's Charlie?</Text>
+		<NextLineId>13</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>13</Id>
+		<Speaker>Vincent</Speaker>
+		<Text>He's the blue haired guy. He should be standing in front of one of the wooden buildings in town.</Text>
+	</DialogueElement>
+</DialogueHead>
