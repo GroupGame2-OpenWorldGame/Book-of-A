@@ -38,6 +38,8 @@ public class NPCMove : MonoBehaviour {
 	[SerializeField]
 	private GameObject player;
 
+	public GameObject thisIsTriggerTarget;
+
 	// Use this for initialization
 	void Start () {
 		navAgent = this.GetComponent<NavMeshAgent> ();
@@ -93,8 +95,10 @@ public class NPCMove : MonoBehaviour {
 			Vector3 targetVector = destination.transform.position;
 			navAgent.SetDestination (targetVector);
 		} else if (destination != null && patroling) {
-			navAgent.SetDestination (patrolPoints [currentPoint].transform.position);
+			destination = patrolPoints [currentPoint].transform;
+			navAgent.SetDestination (destination.transform.position);
 		}
+		thisIsTriggerTarget = destination.gameObject;
 	}
 
 //	void OnTriggerEnter (Collider other)
@@ -123,6 +127,7 @@ public class NPCMove : MonoBehaviour {
 		}
 		navAgent.SetDestination (patrolPoints [tempPoint].transform.position);
 		currentPoint = tempPoint;
+		thisIsTriggerTarget = patrolPoints [tempPoint];
 	}
 
 	void FollowPlayer()

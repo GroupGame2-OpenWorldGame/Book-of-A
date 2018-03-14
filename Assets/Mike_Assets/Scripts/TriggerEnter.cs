@@ -6,20 +6,23 @@ public class TriggerEnter : MonoBehaviour {
 
 	[SerializeField]
 	private NPCMove theNPC;
+	[SerializeField]
+	private GameObject target;
+	[SerializeField]
+	private GameObject thisGO;
+
+	void Start()
+	{
+		thisGO = this.gameObject;
+	}
 
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "NPC") {
-			theNPC.waiting = true;
+			target = theNPC.thisIsTriggerTarget;
+			if (thisGO == target) {
+				theNPC.waiting = true;
+			}
 		}
-		Debug.Log ("Enter " + other.gameObject.name);
 	}
-
-//	void OnTriggerExit (Collider other)
-//	{
-//		if (other.CompareTag("NPC")) {
-//			this.gameObject.tag = "PatrolPoint";
-//		}
-//		Debug.Log ("Exit " + other.name);
-//	}
 }
