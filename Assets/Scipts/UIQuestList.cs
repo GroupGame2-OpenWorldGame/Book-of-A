@@ -39,9 +39,10 @@ public class UIQuestList : MonoBehaviour {
 		SetQuestPanels (GameDriver.Instance.QuestsUnlocked);
 	}
 
-	public void ShowQuestDescription(string questId){
+	public void ShowQuestDescription(int questId){
 		listPanel.SetActive (false);
 		descriptionPanel.SetActive (true);
+		descriptionPanel.gameObject.GetComponent<UIQuestDescription>().SetInfo (GameDriver.Instance.QuestsUnlocked [questId]);
 	}
 
 	public void CloseMenu(){

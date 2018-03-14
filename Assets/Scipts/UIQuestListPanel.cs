@@ -8,7 +8,7 @@ public class UIQuestListPanel : MonoBehaviour {
 	public int id = 0;
 
 	public void SetInfo(string name, string status, int id){
-		id = id;
+		this.id = id;
 		this.GetComponentInChildren<Text> ().text = name;
 		Image statusImage = this.GetComponentsInChildren<Image> ()[1];
 		if (status == "InProgress") {
@@ -21,6 +21,14 @@ public class UIQuestListPanel : MonoBehaviour {
 			statusImage.color = Color.red;
 			statusImage.gameObject.GetComponentInChildren<Text> ().text = "Failed";
 		}
+	}
+
+	void Awake(){
+		this.GetComponent<Button> ().onClick.AddListener (ShowQuestDescription);
+	}
+
+	private void ShowQuestDescription(){
+		GameObject.FindGameObjectWithTag ("QuestMenu").GetComponent<UIQuestList> ().ShowQuestDescription (id);
 	}
 
 
