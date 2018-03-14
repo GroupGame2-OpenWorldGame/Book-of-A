@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour {
 	private FirstPersonController playerMovement;
 	private GameDriver gameDriver;
 	private bool inDialogueRange = false;
-	private bool selectKeyPressed;
+	private bool selectKeyPressed =false;
+	private bool questKeyPressed = false;
 	private bool horizontalPressed = false;
 
 	// Use this for initialization
@@ -27,11 +28,22 @@ public class PlayerController : MonoBehaviour {
 				selectKeyPressed = false;
 			}
 		}
+		if (questKeyPressed) {
+			if (Input.GetAxis ("QuestMenu") == 0) {
+				questKeyPressed = false;
+			}
+		}
 		switch (gameDriver.gameState) {
 		case GameState.OverWorld:
 			if (Input.GetAxis ("Select") != 0 && !selectKeyPressed && inDialogueRange) {
 				selectKeyPressed = true;
 				gameDriver.StartDialogue();
+				break;
+			}
+			if (Input.GetAxis ("QuestMenu") != 0 && !questKeyPressed) {
+				questKeyPressed = true;
+				gameDriver.OpenQuestMenu();
+				break;
 			}
 			break;
 		
@@ -54,6 +66,14 @@ public class PlayerController : MonoBehaviour {
 					gameDriver.AdvanceDialogue ();
 				}
 			} 
+			break;
+
+		case GameState.QuestMenu:
+			if (Input.GetAxis ("QuestMenu") != 0 && !questKeyPressed) {
+				questKeyPressed = true;
+				gameDriver.CloseQuestMenu ();
+				break;
+			}
 			break;
 		}
 	}

@@ -4,6 +4,7 @@ using System.Xml.Serialization;
 using System.Linq;
 using System.Xml.Linq;
 
+[System.Serializable]
 public class DialogueHead {
 
 	[XmlElement]
@@ -16,7 +17,7 @@ public class DialogueHead {
 		get;
 		set;
 	}
-
+		
 	public DialogueElement[] dialogueElements;
 
 	/*
