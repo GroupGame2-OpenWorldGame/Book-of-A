@@ -61,7 +61,6 @@ public class NPCMove : MonoBehaviour {
 			waitTime = Random.Range (ranMin, ranMax);
 		}
 		currentWaitTime = waitTime;
-		thisIsTriggerTarget = destination.gameObject;
 	}
 
 	void Update()
@@ -128,6 +127,7 @@ public class NPCMove : MonoBehaviour {
 		}
 		navAgent.SetDestination (patrolPoints [tempPoint].transform.position);
 		currentPoint = tempPoint;
+		thisIsTriggerTarget = patrolPoints [tempPoint];
 	}
 
 	void FollowPlayer()
