@@ -364,7 +364,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1108323732962776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 107.847946, y: -0.2, z: -63.717484}
+  m_LocalPosition: {x: 107.847946, y: -0.2, z: -62.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4840353871767722}
@@ -977,6 +977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theNPC: {fileID: 114202274104617546}
   target: {fileID: 0}
+  thisGO: {fileID: 1490092837952952}
 --- !u!114 &114116580001492858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -990,6 +991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theNPC: {fileID: 114202274104617546}
   target: {fileID: 0}
+  thisGO: {fileID: 0}
 --- !u!114 &114156101291525138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1060,6 +1062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theNPC: {fileID: 114202274104617546}
   target: {fileID: 0}
+  thisGO: {fileID: 1680563005954062}
 --- !u!114 &114543085134347298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1073,6 +1076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theNPC: {fileID: 114202274104617546}
   target: {fileID: 0}
+  thisGO: {fileID: 1305232730591582}
 --- !u!114 &114548474045752818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1101,6 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theNPC: {fileID: 114202274104617546}
   target: {fileID: 0}
+  thisGO: {fileID: 1038187141618870}
 --- !u!114 &114658782540124304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1129,6 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theNPC: {fileID: 114202274104617546}
   target: {fileID: 0}
+  thisGO: {fileID: 0}
 --- !u!135 &135313303475847896
 SphereCollider:
   m_ObjectHideFlags: 1
