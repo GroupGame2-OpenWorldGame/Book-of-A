@@ -56,7 +56,8 @@ public class GameDriver : MonoBehaviour {
 	private int numOptions;
 	private int selectedButton = 0;
 
-	private Dictionary<string, bool> flags;
+	//private Dictionary<string, bool> flags;
+	private List<string> flags;
 
 	private NPCScript npcTarget;
 	//private Dialogue currentDialogue;
@@ -93,11 +94,12 @@ public class GameDriver : MonoBehaviour {
 		} else {
 			instance = this;
 			DontDestroyOnLoad (this.gameObject);
-			flags = new Dictionary<string, bool>();
+			flags = new List<string> ();
+			//flags = new Dictionary<string, bool>();
 
-			for( int i = 0; i < flagNames.Length; i++){
-				flags.Add(flagNames[i], false);
-			}
+			//for( int i = 0; i < flagNames.Length; i++){
+				//flags.Add(flagNames[i], false);
+			//}
 
 			optionButtons = optionsBox.GetComponentsInChildren<Button> ();
 			CleanUpOptions ();
@@ -268,13 +270,7 @@ public class GameDriver : MonoBehaviour {
 	public void AdvanceDialogue(){
 		if (currentLine is DialogueLine) {
 			if (currentLine.SetWhenDone != null && currentLine.SetWhenDone.Length != 0) {
-				for (int i = 0; i < currentLine.SetWhenDone.Length; i++) {
-					if (currentLine.SetType [i].Contains ("quest")) {
-						SetQuest (currentLine.SetWhenDone [i], currentLine.SetType [i].Split (',') [1]);
-					} else if (currentLine.SetType [i].Contains ("flag")) {
-						SetFlag (currentLine.SetWhenDone[i], currentLine.SetType[i].Split(',')[1]);
-					}
-				}
+				SetCheck (currentLine.SetWhenDone, currentLine.SetType);
 				currentLine.TriggerPassed = true;
 			}
 			DialogueLine line = (DialogueLine)currentLine;
@@ -296,37 +292,56 @@ public class GameDriver : MonoBehaviour {
 		player.SetMovement (true);
 	}
 
-	public void SetFlag(string flagToSet, string setTo){
-		if (string.Equals ("true", setTo, StringComparison.InvariantCultureIgnoreCase)) {
-			flags [flagToSet] = true;
-		} else {
-			flags [flagToSet] = false;
+	public void SetCheck(string[] thingsToSet, string[] setTypes){
+		for (int i = 0; i < thingsToSet.Length; i++) {
+			if (setTypes[i].Contains ("quest")) {
+				SetQuest (thingsToSet[i], setTypes[i].Split (',') [1], setTypes[i].Split(',')[2]);
+			} else if (setTypes[i].Contains ("flag")) {
+				SetFlag (thingsToSet[i], setTypes[i].Split(',')[1]);
+			}
 		}
 	}
 
-	public void SetQuest(string name, string setType){
+	public void SetFlag(string flagToSet, string setTo){
+		if (string.Equals ("true", setTo, StringComparison.InvariantCultureIgnoreCase)) {
+			if (!flags.Contains (flagToSet)) {
+				flags.Add (flagToSet);
+			}
+			//flags [flagToSet] = true;
+		} else {
+			if (flags.Contains (flagToSet)) {
+				flags.Remove(flagToSet);
+			}
+		}
+	}
+
+	public void SetQuest(string name, string setType, string description){
 		foreach (Quest q in questList.Quests) {
 			if (q.Name == name) {
+				if (description != "") {
+					q.Description = description;
+				}
 				if (setType == "InProgress") {
-					QuestsUnlocked.Add (q);
-					q.Status = "InProgress";
+					if (q.Status != "InProgress") {
+						QuestsUnlocked.Add (q);
+						q.Status = "InProgress";
+						if (q.SetWhenStart != null && q.SetWhenStart.Length != 0) {
+							SetCheck (q.SetWhenStart, q.SetStartType);
+						}
+					}
 					return;
 				} else if (setType == "Failed"){
 					questsCompleted.Add(q);
 					q.Status = "Failed";
-					if (q.SetWhenFailed != null) {
-						for (int i = 0; i < q.SetWhenFailed.Length; i++) {
-							SetFlag (q.SetWhenFailed [i], q.SetFailedType [i]);
-						}
+					if (q.SetWhenFailed != null && q.SetWhenFailed.Length != 0) {
+						SetCheck (q.SetWhenFailed, q.SetFailedType);
 					}
 					return;
 				}else if(setType == "Success"){
 					questsCompleted.Add(q);
 					q.Status = "Success";
-					if (q.SetWhenPassed != null) {
-						for (int i = 0; i < q.SetWhenPassed.Length; i++) {
-							SetFlag (q.SetWhenPassed [i], q.SetPassedType [i]);
-						}
+					if (q.SetWhenPassed != null && q.SetWhenStart.Length !=0) {
+						SetCheck (q.SetWhenPassed, q.SetPassedType);
 					}
 				}
 				return;
@@ -347,19 +362,15 @@ public class GameDriver : MonoBehaviour {
 
 	public bool IsFlagTrue(string flagToCheck){
 		if (flagToCheck.StartsWith("!")) {
-			return !(flags[flagToCheck.Split('!')[1]]);
+			return !(flags.Contains(flagToCheck.Split('!')[1]));
 		}
-		return flags [flagToCheck];
+		return flags.Contains(flagToCheck);
 	}
 
 	public bool IsOneFlagTrue(string[] flagsToCheck){
 		foreach (string f in flagsToCheck) {
 			Debug.Log ("Checking " + f);
-			if (f.StartsWith("!")) {
-				if(!flags[f.Split('!')[1]]){
-					return true;
-				}
-			} else if(flags[f]){
+			if (IsFlagTrue (f)) {
 				return true;
 			}
 		}
@@ -370,16 +381,17 @@ public class GameDriver : MonoBehaviour {
 	public bool AreFlagsTrue(string[] flagsToCheck){
 		foreach (string f in flagsToCheck) {
 			Debug.Log ("Checking " + f);
-			if (f.StartsWith("!")) {
-				if(flags[f.Split('!')[1]]){
-					return false;
-				}
-			} else if(!flags[f]){
+			if (!IsFlagTrue (f)) {
 				return false;
 			}
 		}
 		return true;
 	}
+
+	public void SetObject(string objectName, string active){
+	}
+
+
 
 	public void DialogueHitTrue(){
 		dialogueHit = true;

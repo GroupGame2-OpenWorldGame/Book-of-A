@@ -2,7 +2,7 @@
 	<Quest>
 	<Name>Test Quest</Name>
 	<Description>Say "I'm stupid"</Description>
-	<Status>InProgress</Status>
+	<Status>NotStarted</Status>
 	<SetWhenPassed>
 		<value>TestQuestSuccess</value>
 	</SetWhenPassed>
