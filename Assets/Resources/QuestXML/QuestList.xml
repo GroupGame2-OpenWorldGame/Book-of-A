@@ -7,13 +7,13 @@
 		<value>TestQuestSuccess</value>
 	</SetWhenPassed>
 	<SetPassedType>
-		<value>true</value>
+		<value>flag,true</value>
 	</SetPassedType>
 	<SetWhenFailed>
 		<value>TestQuestSuccess</value>
 	</SetWhenFailed>
 	<SetFailedType>
-		<value>false</value>
+		<value>flag,false</value>
 	</SetFailedType>
 	</Quest>
 </QuestList>
