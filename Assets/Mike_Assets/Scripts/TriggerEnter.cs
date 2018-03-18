@@ -18,7 +18,7 @@ public class TriggerEnter : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.gameObject.tag == "NPC") {
+		if (other.gameObject.tag == "Enemy") {
 			target = theNPC.thisIsTriggerTarget;
 			if (thisGO == target) {
 				theNPC.waiting = true;
