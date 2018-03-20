@@ -23,6 +23,16 @@ public class Quest {
 		set;
 	}
 
+	public string[] SetWhenStart {
+		get;
+		set;
+	}
+
+	public string[] SetStartType {
+		get;
+		set;
+	}
+
 	public string[] SetWhenPassed {
 		get;
 		set;
