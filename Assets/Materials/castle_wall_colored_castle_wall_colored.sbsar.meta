@@ -1685,12 +1685,12 @@ SubstanceImporter:
     - shaderProp: _MetallicGlossMap
       material: {instanceID: 0}
       baseUID: 1307423240
-    - shaderProp: _ParallaxMap
-      material: {instanceID: 0}
-      baseUID: 1307423619
     - shaderProp: _OcclusionMap
       material: {instanceID: 0}
       baseUID: 1307423676
+    - shaderProp: _ParallaxMap
+      material: {instanceID: 0}
+      baseUID: 1307423619
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
