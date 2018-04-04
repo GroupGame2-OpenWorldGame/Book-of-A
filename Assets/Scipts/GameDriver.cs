@@ -58,6 +58,7 @@ public class GameDriver : MonoBehaviour {
 
 	//private Dictionary<string, bool> flags;
 	private List<string> flags;
+	private Dictionary<string, int> counters;
 
 	private NPCScript npcTarget;
 	//private Dialogue currentDialogue;
@@ -95,6 +96,7 @@ public class GameDriver : MonoBehaviour {
 			instance = this;
 			DontDestroyOnLoad (this.gameObject);
 			flags = new List<string> ();
+			counters = new Dictionary<string, int> ();
 			//flags = new Dictionary<string, bool>();
 
 			//for( int i = 0; i < flagNames.Length; i++){
@@ -294,10 +296,14 @@ public class GameDriver : MonoBehaviour {
 
 	public void SetCheck(string[] thingsToSet, string[] setTypes){
 		for (int i = 0; i < thingsToSet.Length; i++) {
-			if (setTypes[i].Contains ("quest")) {
-				SetQuest (thingsToSet[i], setTypes[i].Split (',') [1], setTypes[i].Split(',')[2]);
-			} else if (setTypes[i].Contains ("flag")) {
-				SetFlag (thingsToSet[i], setTypes[i].Split(',')[1]);
+			if (setTypes [i].StartsWith ("quest", StringComparison.OrdinalIgnoreCase)) {
+				SetQuest (thingsToSet [i], setTypes [i].Split (',') [1], setTypes [i].Split (',') [2]);
+			} else if (setTypes [i].StartsWith ("flag", StringComparison.OrdinalIgnoreCase)) {
+				SetFlag (thingsToSet [i], setTypes [i].Split (',') [1]);
+			} else if (setTypes [i].StartsWith ("object", StringComparison.OrdinalIgnoreCase)) {
+				SetObject (thingsToSet [i], setTypes [i].Split (',') [1]);
+			} else if (setTypes [i].StartsWith ("counter", StringComparison.OrdinalIgnoreCase)) {
+				SetCounter (thingsToSet [i], setTypes [i].Split (',') [1], setTypes [i].Split (',') [2]);
 			}
 		}
 	}
@@ -312,6 +318,19 @@ public class GameDriver : MonoBehaviour {
 			if (flags.Contains (flagToSet)) {
 				flags.Remove(flagToSet);
 			}
+		}
+	}
+
+	public void SetCounter(string counterToSet, string setType, string value){
+		if (!counters.ContainsKey (counterToSet)) {
+			counters.Add (counterToSet, 0);
+		}
+		if (setType.Equals ("Add", StringComparison.OrdinalIgnoreCase)) {
+			counters [counterToSet] += Int32.Parse(value);
+		} else if (setType.Equals ("Sudtract", StringComparison.OrdinalIgnoreCase)) {
+			counters [counterToSet] -= Int32.Parse(value);
+		}else if (setType.Equals ("Set", StringComparison.OrdinalIgnoreCase)) {
+			counters [counterToSet] = Int32.Parse(value);
 		}
 	}
 
@@ -350,12 +369,36 @@ public class GameDriver : MonoBehaviour {
 		Debug.Log ("ERROR: Quest not found");
 		return;
 	}
+
+	public void SetObject(string name, string setType){
+		if (GameObject.Find (name).GetComponent<QuestObject> () == null) {
+			Debug.LogError("Quest object '" + name + "' not found.");
+		} else{
+			QuestObject qO = GameObject.Find (name).GetComponent<QuestObject> ();
+
+			if(setType.Equals("Active",StringComparison.OrdinalIgnoreCase)){
+				qO.SetActive(true);
+			} else if(setType.Equals("Inactive",StringComparison.OrdinalIgnoreCase)){
+				qO.SetActive(false);
+			}
+		}
+	}
 		
-	public bool CheckConditions(string[] flagsToCheck, string checkType){
+	public bool CheckConditions(string[] thingsToCheck, string checkType){
 		if (checkType.Equals ("OR")) {
-			return IsOneFlagTrue (flagsToCheck);
+			return IsOneConditionTrue (thingsToCheck);
 		} else if (checkType.Equals ("AND")) {
-			return AreFlagsTrue (flagsToCheck);
+			return AreAllConditionsTrue (thingsToCheck);
+		}
+		return false;
+	}
+
+	public bool IsConditionTrue(string condition){
+		string conType = condition.Split (',') [0];
+		if (conType.Equals ("flag", StringComparison.OrdinalIgnoreCase)) {
+			return IsFlagTrue (condition.Split (',') [1]);
+		} else if (conType.Equals ("counter", StringComparison.OrdinalIgnoreCase)) {
+			return CheckCounter (condition.Split (',') [1], condition.Split (',') [2]);
 		}
 		return false;
 	}
@@ -367,10 +410,32 @@ public class GameDriver : MonoBehaviour {
 		return flags.Contains(flagToCheck);
 	}
 
-	public bool IsOneFlagTrue(string[] flagsToCheck){
-		foreach (string f in flagsToCheck) {
-			Debug.Log ("Checking " + f);
-			if (IsFlagTrue (f)) {
+	public bool CheckCounter(string counterName, string compare){
+		if (!counters.ContainsKey (counterName)) {
+			counters.Add (counterName, 0);
+		}
+
+		if(compare.StartsWith("==")){
+			return  (counters [counterName] == Int32.Parse (compare.Split ('=') [2]));
+		} else if(compare.StartsWith("!=")){
+			return  (counters [counterName] != Int32.Parse (compare.Split ('=') [1]));
+		} else if(compare.StartsWith(">=")){
+			return  (counters [counterName] >= Int32.Parse (compare.Split ('=') [1]));
+		} else if(compare.StartsWith("<=")){
+			return  (counters [counterName] <= Int32.Parse (compare.Split ('=') [1]));
+		} else if(compare.StartsWith(">")){
+			return  (counters [counterName] > Int32.Parse (compare.Split ('>') [1]));
+		} else if(compare.StartsWith("<")){
+			return  (counters [counterName] < Int32.Parse (compare.Split ('<') [1]));
+		} 
+
+		return false;
+	}
+
+	public bool IsOneConditionTrue(string[] thingsToCheck){
+		foreach (string c in thingsToCheck) {
+			Debug.Log ("Checking " + c);
+			if (IsConditionTrue (c)) {
 				return true;
 			}
 		}
@@ -378,17 +443,14 @@ public class GameDriver : MonoBehaviour {
 	}
 
 	//array version
-	public bool AreFlagsTrue(string[] flagsToCheck){
-		foreach (string f in flagsToCheck) {
-			Debug.Log ("Checking " + f);
-			if (!IsFlagTrue (f)) {
+	public bool AreAllConditionsTrue(string[] thingsToCheck){
+		foreach (string c in thingsToCheck) {
+			Debug.Log ("Checking " + c);
+			if (!IsConditionTrue (c)) {
 				return false;
 			}
 		}
 		return true;
-	}
-
-	public void SetObject(string objectName, string active){
 	}
 
 

@@ -5,7 +5,7 @@
 		<Id>1</Id>
 		<CheckType>OR</CheckType>
 		<ConditionsToCheck>
-			<value>TalkedToCharlie</value>
+			<value>flag,TalkedToCharlie</value>
 		</ConditionsToCheck>
 		<TrueLineId>3</TrueLineId>
 		<FalseLineId>2</FalseLineId>

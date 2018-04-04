@@ -5,7 +5,7 @@
 		<Id>1</Id>
 		<CheckType>AND</CheckType>
 		<ConditionsToCheck>
-			<value>TalkedToVincent</value>
+			<value>flag,TalkedToVincent</value>
 		</ConditionsToCheck>
 		<TrueLineId>14</TrueLineId>
 		<FalseLineId>2</FalseLineId>
@@ -32,7 +32,7 @@
 		<Id>3</Id>
 		<CheckType>AND</CheckType>
 		<ConditionsToCheck>
-			<value>TalkedToCharlie</value>
+			<value>flag,TalkedToCharlie</value>
 		</ConditionsToCheck>
 		<TrueLineId>4</TrueLineId>
 		<FalseLineId>7</FalseLineId>>

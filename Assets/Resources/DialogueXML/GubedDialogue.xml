@@ -5,7 +5,7 @@
 		<Id>1</Id>
 		<CheckType>AND</CheckType>
 		<ConditionsToCheck>
-			<value>TestQuestDone</value>
+			<value>flag,TestQuestDone</value>
 		</ConditionsToCheck>
 		<TrueLineId>10</TrueLineId>
 		<FalseLineId>2</FalseLineId>
@@ -14,7 +14,7 @@
 		<Id>2</Id>
 		<CheckType>AND</CheckType>
 		<ConditionsToCheck>
-			<value>TalkedToGubed</value>
+			<value>flag,TalkedToGubed</value>
 		</ConditionsToCheck>
 		<TrueLineId>4</TrueLineId>
 		<FalseLineId>3</FalseLineId>
@@ -93,7 +93,7 @@
 		<Id>10</Id>
 		<CheckType>AND</CheckType>
 		<ConditionsToCheck>
-			<value>TestQuestSuccess</value>
+			<value>flag,TestQuestSuccess</value>
 		</ConditionsToCheck>
 		<TrueLineId>11</TrueLineId>
 		<FalseLineId>12</FalseLineId>
