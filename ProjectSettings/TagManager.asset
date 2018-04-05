@@ -8,6 +8,7 @@ TagManager:
   - PatrolPoint
   - QuestMenu
   - Enemy
+  - QuestItem
   layers:
   - Default
   - TransparentFX

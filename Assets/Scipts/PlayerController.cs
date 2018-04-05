@@ -9,8 +9,10 @@ public class PlayerController : MonoBehaviour {
 	//public float rotationFactor = 15.0f;
 
 	private FirstPersonController playerMovement;
+	private QuestObject questObjectTarget = null;
 	private GameDriver gameDriver;
 	private bool inDialogueRange = false;
+	private bool inCollectRange = false;
 	private bool selectKeyPressed =false;
 	private bool questKeyPressed = false;
 	private bool horizontalPressed = false;
@@ -35,11 +37,16 @@ public class PlayerController : MonoBehaviour {
 		}
 		switch (gameDriver.gameState) {
 		case GameState.OverWorld:
-			if (Input.GetAxis ("Select") != 0 && !selectKeyPressed && inDialogueRange) {
+			if (Input.GetAxis ("Select") != 0 && !selectKeyPressed) {
 				selectKeyPressed = true;
-				gameDriver.StartDialogue();
+				if (inDialogueRange) {
+					gameDriver.StartDialogue ();
+				} else if (inCollectRange) {
+					questObjectTarget.Collect ();
+				}
 				break;
 			}
+				
 			if (Input.GetAxis ("QuestMenu") != 0 && !questKeyPressed) {
 				questKeyPressed = true;
 				gameDriver.OpenQuestMenu();
@@ -87,12 +94,22 @@ public class PlayerController : MonoBehaviour {
 			gameDriver.NPCTarget = other.gameObject.GetComponent<NPCScript> ();
 			inDialogueRange = true;
 		}
+		if (other.gameObject.tag == "QuestItem") {
+			questObjectTarget = other.gameObject.GetComponent<QuestObject> ();
+			inCollectRange = true;
+		}
 	}
 
 	void OnTriggerExit(Collider other){
 		if (other.gameObject.tag == "NPC") {
 			if (other.gameObject.GetComponent<NPCScript> () == gameDriver.NPCTarget) {
 				inDialogueRange = false;
+			}
+		}
+		if (other.gameObject.tag == "QuestItem") {
+			if (questObjectTarget == other.gameObject.GetComponent<QuestObject> ()) {
+				questObjectTarget = null;
+				inCollectRange = false;
 			}
 		}
 	}

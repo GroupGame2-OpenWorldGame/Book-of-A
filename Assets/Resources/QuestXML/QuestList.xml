@@ -16,4 +16,15 @@
 		<value>flag,false</value>
 	</SetFailedType>
 	</Quest>
+	<Quest>
+	<Name>Sphere Quest</Name>
+	<Description>Collect 3 spheres.</Description>
+	<Status>NotStarted</Status>
+	<SetWhenPassed>
+		<value>SphereQuestComplete</value>
+	</SetWhenPassed>
+	<SetPassedType>
+		<value>flag,true</value>
+	</SetPassedType>
+	</Quest>
 </QuestList>

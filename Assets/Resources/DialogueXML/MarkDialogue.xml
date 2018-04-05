@@ -1,0 +1,75 @@
+<DialogueHead>
+	<NPCName>Mark</NPCName>
+	<FirstLineId>1</FirstLineId>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>1</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>counter,SpheresCollected,==3</value>
+		</ConditionsToCheck>
+		<TrueLineId>6</TrueLineId>
+		<FalseLineId>2</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>2</Id>
+		<Speaker>Mark</Speaker>
+		<Text>Hey there!</Text>
+		<NextLineId>3</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>3</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>flag,!TalkedToMark</value>
+		</ConditionsToCheck>
+		<TrueLineId>4</TrueLineId>
+		<FalseLineId>5</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>4</Id>
+		<Speaker>Mark</Speaker>
+		<Text>Go collect the 3 red spheres around here. Come back when you have all 3.</Text>
+		<SetWhenDone>
+			<value>TalkedToMark</value>
+			<value>Sphere Quest</value>
+			<value>Collectables</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>quest,InProgress,</value>
+			<value>object,Active</value>
+		</SetType>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>5</Id>
+		<Speaker>Mark</Speaker>
+		<Text>You don't have 3 balls yet.</Text>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>6</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>flag,!SphereQuestComplete</value>
+		</ConditionsToCheck>
+		<TrueLineId>7</TrueLineId>
+		<FalseLineId>8</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>7</Id>
+		<Speaker>Mark</Speaker>
+		<Text>Oh hey, you got all 3! Great job.</Text>
+		<SetWhenDone>
+			<value>TalkedToMark</value>
+			<value>Sphere Quest</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>quest,Success,</value>
+		</SetType>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>8</Id>
+		<Speaker>Mark</Speaker>
+		<Text>Good on you.</Text>
+	</DialogueElement>
+</DialogueHead>

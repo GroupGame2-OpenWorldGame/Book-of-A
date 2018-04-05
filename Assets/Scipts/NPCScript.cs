@@ -21,7 +21,9 @@ public class NPCScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gameDriver = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameDriver> ();
-		dialogueHead = gameDriver.DeserializeXMLDialogueLinq(dialogueXMLPath);
+		if (dialogueXMLPath != "") {
+			dialogueHead = gameDriver.DeserializeXMLDialogueLinq(dialogueXMLPath);
+		}
 		//dialogueHead.SetHeadToLines ();
 		//dialogueHead.SetLines ();
 

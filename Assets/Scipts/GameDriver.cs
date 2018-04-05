@@ -332,6 +332,8 @@ public class GameDriver : MonoBehaviour {
 		}else if (setType.Equals ("Set", StringComparison.OrdinalIgnoreCase)) {
 			counters [counterToSet] = Int32.Parse(value);
 		}
+
+		Debug.Log (counterToSet + " = " + counters [counterToSet]);
 	}
 
 	public void SetQuest(string name, string setType, string description){
@@ -350,6 +352,9 @@ public class GameDriver : MonoBehaviour {
 					}
 					return;
 				} else if (setType == "Failed"){
+					if (questsUnlocked.Contains (q)) {
+						questsUnlocked.Add (q);
+					}
 					questsCompleted.Add(q);
 					q.Status = "Failed";
 					if (q.SetWhenFailed != null && q.SetWhenFailed.Length != 0) {
@@ -359,7 +364,7 @@ public class GameDriver : MonoBehaviour {
 				}else if(setType == "Success"){
 					questsCompleted.Add(q);
 					q.Status = "Success";
-					if (q.SetWhenPassed != null && q.SetWhenStart.Length !=0) {
+					if (q.SetWhenPassed != null && q.SetWhenPassed.Length !=0) {
 						SetCheck (q.SetWhenPassed, q.SetPassedType);
 					}
 				}

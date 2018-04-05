@@ -29,7 +29,7 @@
 		</SetWhenDone>
 		<SetType>
 			<value>flag,true</value>
-			<value>quest,InProgress</value>
+			<value>quest,InProgress,</value>
 		</SetType>
 	</DialogueElement>
 	<DialogueElement Type="DialogueLine">
@@ -67,7 +67,7 @@
 		</SetWhenDone>
 		<SetType>
 			<value>flag,true</value>
-			<value>quest,Success</value>
+			<value>quest,Success,</value>
 		</SetType>
 	</DialogueElement>
 	<DialogueElement Type="DialogueLine">
@@ -86,7 +86,7 @@
 		</SetWhenDone>
 		<SetType>
 			<value>flag,true</value>
-			<value>quest,Failed</value>
+			<value>quest,Failed,</value>
 		</SetType>
 	</DialogueElement>
 	<DialogueElement Type="DialogueIfBranch">
