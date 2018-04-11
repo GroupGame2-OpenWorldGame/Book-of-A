@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class AgentMovement : MonoBehaviour {
 
@@ -40,6 +41,8 @@ public class AgentMovement : MonoBehaviour {
 
 	public GameObject thisIsTriggerTarget;  //redundant reference to destination for experimentation
 
+	public Animator theAnimAI;
+
 	// Use this for initialization
 	void Start () {
 		navAgent = this.GetComponent<NavMeshAgent> ();  // get nav mesh component 
@@ -53,7 +56,7 @@ public class AgentMovement : MonoBehaviour {
 		if (navAgent == null)
 		{
 			Debug.LogError ("The nav mesh agent is not attatched to " + gameObject.name);  // makes sure nav mesh component is obtained 
-		} else if (patroling) 
+		} else if (randomPatrol) 
 		{
 			ChangePatrol ();  // method call
 		} else 
@@ -101,6 +104,12 @@ public class AgentMovement : MonoBehaviour {
 		
 		{
 			FollowPlayer ();
+		}
+
+		if (waiting) {
+			theAnimAI.SetBool ("Walk", false);
+		} else {
+			theAnimAI.SetBool ("Walk", true);
 		}
 	}
 

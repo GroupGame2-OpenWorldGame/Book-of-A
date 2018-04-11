@@ -9,6 +9,7 @@ TagManager:
   - QuestMenu
   - Enemy
   - QuestItem
+  - Animal
   layers:
   - Default
   - TransparentFX
