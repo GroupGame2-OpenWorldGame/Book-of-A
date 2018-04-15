@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class NPCMove : MonoBehaviour {
 
@@ -39,6 +40,8 @@ public class NPCMove : MonoBehaviour {
 	private GameObject player;
 
 	public GameObject thisIsTriggerTarget;
+
+	public Animator theAnimAI;
 
 	// Use this for initialization
 	void Start () {
@@ -84,6 +87,11 @@ public class NPCMove : MonoBehaviour {
 					}
 					currentWaitTime = waitTime;
 				}
+			}
+			if (waiting) {
+				theAnimAI.SetBool ("Walk", false);
+			} else {
+				theAnimAI.SetBool ("Walk", true);
 			}
 		} else {
 			FollowPlayer ();
