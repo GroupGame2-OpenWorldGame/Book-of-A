@@ -27,4 +27,21 @@
 		<value>flag,true</value>
 	</SetPassedType>
 	</Quest>
+	<Quest>
+	<Name>Mad Quest</Name>
+	<Description>Kill...something</Description>
+	<Status>NotStarted</Status>
+	<SetWhenPassed>
+		<value>MadQuestSuccess</value>
+	</SetWhenPassed>
+	<SetPassedType>
+		<value>flag,true</value>
+	</SetPassedType>
+	<SetWhenFailed>
+		<value>MadQuestSuccess</value>
+	</SetWhenFailed>
+	<SetFailedType>
+		<value>flag,false</value>
+	</SetFailedType>
+	</Quest>
 </QuestList>

@@ -1,0 +1,130 @@
+<DialogueHead>
+	<NPCName>Fergus</NPCName>
+	<FirstLineId>11</FirstLineId>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>11</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>flag,!MadQuestComplete</value>
+		</ConditionsToCheck>
+		<TrueLineId>1</TrueLineId>
+		<FalseLineId>12</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>12</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>flag,MadQuestSuccess</value>
+		</ConditionsToCheck>
+		<TrueLineId>8</TrueLineId>
+		<FalseLineId>13</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>1</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>counter,FrogKilled,==1</value>
+		</ConditionsToCheck>
+		<TrueLineId>6</TrueLineId>
+		<FalseLineId>3</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueOption">
+		<Id>2</Id>
+		<Speaker>Fergus</Speaker>
+		<Text>I have a secret if you want to hear it, there is something you must do otherwise, shoo.</Text>
+		<Options>
+			<value>Do?</value>
+			<value>Rhymes?</value>
+			<value>You're mad.</value>
+		</Options>
+		<DecisionLineIds>
+			<value>4</value>
+			<value>9</value>
+			<value>10</value>
+		</DecisionLineIds>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>3</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>flag,!TalkedToFergus</value>
+		</ConditionsToCheck>
+		<TrueLineId>2</TrueLineId>
+		<FalseLineId>5</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>4</Id>
+		<Speaker>Fergus</Speaker>
+		<Text>There is this thing that brings me pain, the ground must stain with its insides to turn the tides. This thing must croak maybe with a knife or a stroke. now hop to it and go do it.</Text>
+		<SetWhenDone>
+			<value>TalkedToFergus</value>
+			<value>Mad Quest</value>
+			<value>DeamonFrog</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>quest,InProgress,</value>
+			<value>object,Active</value>
+		</SetType>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>5</Id>
+		<Speaker>Fergus</Speaker>
+		<Text>I already told you what you must do. Kill the hopping beast and bring back a piece of it's leg, now don't make me beg.</Text>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>6</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>flag,!MadQuestComplete</value>
+		</ConditionsToCheck>
+		<TrueLineId>7</TrueLineId>
+		<FalseLineId>8</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>7</Id>
+		<Speaker>Fergus</Speaker>
+		<Text>The deamon is dead, the ground is red, you made my day now here is your pay. A page for your book, if you'll have a look.</Text>
+		<SetWhenDone>
+			<value>MadQuestComplete</value>
+			<value>TalkedToFergus</value>
+			<value>Mad Quest</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>flag,true</value>
+			<value>quest,Success,</value>
+		</SetType>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>8</Id>
+		<Speaker>Fergus</Speaker>
+		<Text>More are on the way, if you choose to stay you'll need help to fight if you want to be all right.</Text>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>9</Id>
+		<Speaker>Fergus</Speaker>
+		<Text>Riddles and rhymes in these crazy times are to earn my trust but first you must know the reply or hear my good-bye.</Text>
+		<NextLineId>4</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>10</Id>
+		<Speaker>Fergus</Speaker>
+		<Text>You'll be sorry when there's an army knocking at your door, you'll find out what's in store.</Text>
+		<SetWhenDone>
+			<value>MadQuestComplete</value>
+			<value>TalkedToFergus</value>
+			<value>Mad Quest</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>flag,true</value>
+			<value>quest,Failed,</value>
+		</SetType>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>13</Id>
+		<Speaker>Fergus</Speaker>
+		<Text>Quite sad. Me mad? Just a tad. You bad. Bye lad.</Text>
+	</DialogueElement>
+</DialogueHead>

@@ -7,20 +7,24 @@ public class EnemyHealth : MonoBehaviour {
 	public float maxHealth;
 	private float currentHealth;
 	[SerializeField]
-	private GameObject enemy;
-	[SerializeField]
-	private GameObject effect;
+	private bool questEnemy;
+	private QuestObject theQO;
 
 	// Use this for initialization
 	void Start () {
 		currentHealth = maxHealth;
+		if (questEnemy) {
+			theQO = GetComponent<QuestObject> ();
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (currentHealth <= 0) {
-//			Instantiate (effect, transform.position,transform.rotation).SetActive(true);
-			enemy.SetActive (false);
+			if (questEnemy) {
+				theQO.Collect();
+			}
+			this.gameObject.SetActive (false);
 		}
 	}
 
