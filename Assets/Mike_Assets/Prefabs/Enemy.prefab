@@ -1067,6 +1067,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   questEnemy: 0
+  aggressive: 1
+  playerZone: {fileID: 1001089670561650}
 --- !u!114 &114539085796732828
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -9,7 +9,7 @@ public class AttackTrigger : MonoBehaviour {
 
 	void OnTriggerStay (Collider other)
 	{
-		if (other.gameObject.tag == "Enemy") {
+		if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Animal") {
 			if (attack) {
 				EnemyHealth theEH = other.GetComponentInParent<EnemyHealth> ();
 				theEH.HurtEnemy (theA.damage);
