@@ -156,5 +156,6 @@ public class AgentMovement : MonoBehaviour {
 	void FollowPlayer()
 	{
 		navAgent.SetDestination (player.transform.position);  // follow player if player is mean to be followed 
+		waiting = false;
 	}
 }

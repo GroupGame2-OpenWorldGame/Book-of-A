@@ -9,10 +9,17 @@ public class EnemyHealth : MonoBehaviour {
 	[SerializeField]
 	private bool questEnemy;
 	private QuestObject theQO;
+	[SerializeField]
+	private bool aggressive;
+	[SerializeField]
+	private GameObject playerZone;
 
 	// Use this for initialization
 	void Start () {
 		currentHealth = maxHealth;
+		if (!aggressive) {
+			playerZone.SetActive (false);
+		}
 		if (questEnemy) {
 			theQO = GetComponent<QuestObject> ();
 		}
@@ -22,9 +29,12 @@ public class EnemyHealth : MonoBehaviour {
 	void Update () {
 		if (currentHealth <= 0) {
 			if (questEnemy) {
-				theQO.Collect();
+				theQO.Collect ();
 			}
 			this.gameObject.SetActive (false);
+		} else if (!aggressive && currentHealth < maxHealth) {
+			playerZone.SetActive (true);
+			aggressive = true;
 		}
 	}
 
