@@ -50,8 +50,6 @@ public class GameDriver : MonoBehaviour {
 	//TESTING VARIABLES
 	public bool dialogueHit = false;
 
-	public string[] flagNames;
-
 	private Button[] optionButtons;
 	private int numOptions;
 	private int selectedButton = 0;

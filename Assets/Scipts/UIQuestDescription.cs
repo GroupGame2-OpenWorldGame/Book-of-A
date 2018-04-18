@@ -4,6 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIQuestDescription : MonoBehaviour {
-	public void SetInfo(Quest quest){
+	[SerializeField]
+	private static Color successColor;
+	[SerializeField]
+	private static Color failedColor;
+	[SerializeField]
+	private static Color inProgressColor;
+
+
+	[SerializeField]
+	private Text name;
+	[SerializeField]
+	private Text description;
+	[SerializeField]
+	private Text status;
+
+	public void SetInfo(int questId){
+		Quest q = GameDriver.Instance.QuestsUnlocked [questId];
+
+		name.text = q.Name;
+		description.text = q.Description;
+		status.text = q.Status;
+
+		if (q.Status == "InProgress") {
+			status.color = inProgressColor;
+		} else if (q.Status == "Success") {
+			status.color = successColor;
+		} else if (q.Status == "Failed") {
+			status.color = failedColor;
+		}
 	}
 }
