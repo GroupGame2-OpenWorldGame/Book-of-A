@@ -14,8 +14,11 @@ public class PlayerHealth : MonoBehaviour {
 	[SerializeField]
 	private GameObject hudHealth;
 
+	public static PlayerHealth Me;
+
 	// Use this for initialization
 	void Start () {
+		PlayerHealth.Me = this;
 		healthBar.maxValue = maxHealth;
 		currentHealth = healthBar.value;
 	}
@@ -38,5 +41,10 @@ public class PlayerHealth : MonoBehaviour {
 	public void HurtPlayer(float damageDealt)
 	{
 		currentHealth -= damageDealt;
+	}
+
+	public void GetHit(BanditFist fist){
+		Debug.Log ("GOT HIT BY: " + fist.gameObject.name );
+		HurtPlayer (1);
 	}
 }
