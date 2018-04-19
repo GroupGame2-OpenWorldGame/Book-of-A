@@ -107,6 +107,7 @@ public class GameDriver : MonoBehaviour {
 
 			questList = DeserializeQuestListLinq (questListPath);
 			questsUnlocked = new List<Quest> ();
+			Debug.Log ("QU SET");
 			questsInProgress = new List<Quest> ();
 			questsCompleted = new List<Quest> ();
 		}
@@ -140,7 +141,7 @@ public class GameDriver : MonoBehaviour {
 	*/
 
 	public void OpenQuestMenu(){
-		player.SetMovement (false);
+		//player.SetMovement (false);
 		Time.timeScale = 0f;
 		gameState = GameState.QuestMenu;
 		questMenu.gameObject.SetActive (true);
@@ -148,7 +149,7 @@ public class GameDriver : MonoBehaviour {
 	}
 
 	public void CloseQuestMenu(){
-		player.SetMovement (true);
+		//player.SetMovement (true);
 		Time.timeScale = 1f;
 		gameState = GameState.OverWorld;
 		questMenu.gameObject.SetActive (false);

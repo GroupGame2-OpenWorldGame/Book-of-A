@@ -6,6 +6,7 @@ public class TestAnimator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		this.GetComponent<Animator> ().updateMode = AnimatorUpdateMode.UnscaledTime;
 	}
 	
 	// Update is called once per frame

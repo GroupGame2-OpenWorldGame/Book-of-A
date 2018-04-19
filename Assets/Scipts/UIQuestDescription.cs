@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UIQuestDescription : MonoBehaviour {
 	[SerializeField]
-	private static Color successColor;
+	private static Color successColor = Color.green;
 	[SerializeField]
-	private static Color failedColor;
+	private static Color failedColor = Color.red;
 	[SerializeField]
-	private static Color inProgressColor;
+	private static Color inProgressColor = Color.yellow;
 
 
 	[SerializeField]
@@ -20,7 +20,7 @@ public class UIQuestDescription : MonoBehaviour {
 	private Text status;
 
 	public void SetInfo(int questId){
-		if (questId > 0 && questId < GameDriver.Instance.QuestsUnlocked.Count) {
+		if (questId >= 0 && questId < GameDriver.Instance.QuestsUnlocked.Count) {
 			Quest q = GameDriver.Instance.QuestsUnlocked [questId];
 
 			name.text = q.Name;

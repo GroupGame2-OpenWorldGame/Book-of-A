@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class UIQuestPanel : MonoBehaviour {
 
 	[SerializeField]
-	private static Color successColor;
+	private static Color successColor = Color.green;
 	[SerializeField]
-	private static Color failedColor;
+	private static Color failedColor = Color.red;
 	[SerializeField]
-	private static Color inProgressColor;
+	private static Color inProgressColor = Color.black;
 
 	[SerializeField]
-	private static Color selectedColor;
+	private static Color selectedColor = Color.yellow;
 
 	[SerializeField]
-	private static Color unSelectedColor;
+	private static Color unSelectedColor = new Color(0,0,0,0);
 
 
 	[SerializeField]

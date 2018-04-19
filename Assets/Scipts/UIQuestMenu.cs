@@ -33,6 +33,12 @@ public class UIQuestMenu : MonoBehaviour {
 	private bool hasLeftPage = false;
 	private bool hasRightPage = false;
 
+	public bool IsFlipping{
+		get{
+			return flipping;
+		}
+	}
+
 	public int PageNumber{
 		get{
 			return pageNum;
@@ -69,12 +75,14 @@ public class UIQuestMenu : MonoBehaviour {
 	}
 
 	public void SetQuestPanels(int pageNum){
-		hasLeftPage = (pageNum == 0);
+		Debug.Log ("SET CALLED");
+		hasLeftPage = (pageNum != 0);
 		settingInfo = true;
 		selectedPanel = 0;
 		int count = questPanels.Length;
 		int dif = GameDriver.Instance.QuestsUnlocked.Count - questPanels.Length * pageNum;
 		hasRightPage = (dif > questPanels.Length);
+		Debug.Log ("Has right page? : " + hasRightPage);
 		if (dif < questPanels.Length) {
 			for (int i = questPanels.Length - dif; i > 0; i--) {
 				questPanels [questPanels.Length - i].SetActive (false);
@@ -92,26 +100,40 @@ public class UIQuestMenu : MonoBehaviour {
 		settingInfo = false;
 	}
 
-	public IEnumerator TurnPage(TurnDir dir){
+	public void TurnPage(TurnDir dir){
+		StartCoroutine (TurnPageEnum (dir));
+	}
+
+	private IEnumerator TurnPageEnum(TurnDir dir){
+		Debug.Log ("ENUMHIT");
 		flipping = true;
-		questPanels [selectedPanel].GetComponent<UIQuestPanel> ().Select (false);
-		questList.SetActive (false);
-		questDecription.SetActive (false);
+		Debug.Log ("TURNPAGE HIT 1");
 		if (dir == TurnDir.Foward) {
+			Debug.Log ("TF: " + hasRightPage);
 			if (!hasRightPage) {
 				flipping = false;
-				StopCoroutine ("TurnPage");
+				yield break;
+				Debug.Log ("NOTBREAK!!!");
 			}
+			questPanels [selectedPanel].GetComponent<UIQuestPanel> ().Select (false);
+			questList.SetActive (false);
+			questDecription.SetActive (false);
 			bookAnimator.SetTrigger ("Flip");
 			pageNum++;
 		} else {
+			Debug.Log ("TB: " + hasLeftPage); 
 			if (!hasLeftPage) {
 				flipping = false;
-				StopCoroutine ("TurnPage");
+				yield break;
 			}
+			questPanels [selectedPanel].GetComponent<UIQuestPanel> ().Select (false);
+			questList.SetActive (false);
+			questDecription.SetActive (false);
 			bookAnimator.SetTrigger ("FlipBack");
 			pageNum--;
 		}
+		yield return new WaitForSecondsRealtime (0.2f);
+		//Debug.Log (!bookAnimator.GetCurrentAnimatorStateInfo (0).IsName ("Flip"));
 		yield return new WaitUntil(() => bookAnimator.GetCurrentAnimatorStateInfo (0).IsName ("BookOpen"));
 
 		questList.SetActive (true);
@@ -121,6 +143,6 @@ public class UIQuestMenu : MonoBehaviour {
 		yield return new WaitWhile(() => settingInfo);
 
 		flipping = false;
-		StopCoroutine ("TurnPage");
+		yield break;
 	}
 }

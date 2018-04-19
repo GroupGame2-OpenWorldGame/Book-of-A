@@ -17,6 +17,31 @@
 	</SetFailedType>
 	</Quest>
 	<Quest>
+	<Name>Verse 1</Name>
+	<Description>The rusted chains of prison moons are shattered by the sun.</Description>
+	<Status>NotStarted</Status>
+	</Quest>
+	<Quest>
+	<Name>Verse 2</Name>
+	<Description>I walk a road, horizons change, the tornament's begun.</Description>
+	<Status>NotStarted</Status>
+	</Quest>
+	<Quest>
+	<Name>Verse 3</Name>
+	<Description>The purple piper plays his tune</Description>
+	<Status>NotStarted</Status>
+	</Quest>
+	<Quest>
+	<Name>Verse 4</Name>
+	<Description>The choir softly sings</Description>
+	<Status>NotStarted</Status>
+	</Quest>
+	<Quest>
+	<Name>Verse 5</Name>
+	<Description>3 lullibies in an ancient tongue for the court of the Crimson King.</Description>
+	<Status>NotStarted</Status>
+	</Quest>
+	<Quest>
 	<Name>Sphere Quest</Name>
 	<Description>Collect 3 spheres.</Description>
 	<Status>NotStarted</Status>

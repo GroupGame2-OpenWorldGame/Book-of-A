@@ -36,6 +36,16 @@ public class PlayerController : MonoBehaviour {
 				questKeyPressed = false;
 			}
 		}
+		if (horizontalPressed) {
+			if (Input.GetAxisRaw ("Horizontal") == 0) {
+				horizontalPressed = false;
+			}
+		}
+		if (verticalPressed) {
+			if (Input.GetAxisRaw ("Vertical") == 0) {
+				verticalPressed = false;
+			}
+		}
 		switch (gameDriver.gameState) {
 		case GameState.OverWorld:
 			if (Input.GetAxis ("Select") != 0 && !selectKeyPressed) {
@@ -77,25 +87,34 @@ public class PlayerController : MonoBehaviour {
 			break;
 
 		case GameState.QuestMenu:
-			if (Input.GetAxisRaw ("QuestMenu") != 0) {
-				if (!questKeyPressed) {
-					questKeyPressed = true;
-					gameDriver.CloseQuestMenu ();
-					break;
+			if (!GameDriver.Instance.questMenu.IsFlipping) {
+				if (Input.GetAxisRaw ("QuestMenu") != 0) {
+					if (!questKeyPressed) {
+						questKeyPressed = true;
+						gameDriver.CloseQuestMenu ();
+						break;
+					}
 				}
-			}
 
+				if (!verticalPressed) {
+					if (Input.GetAxisRaw ("Vertical") >= 0.001) {
+						GameDriver.Instance.questMenu.ChangeSelected (SelectDir.Up);
+						verticalPressed = true;
+					} else if (Input.GetAxisRaw ("Vertical") <= -0.001) {
+						GameDriver.Instance.questMenu.ChangeSelected (SelectDir.Down);
+						verticalPressed = true;
+					}
+				}
 
-			if (Input.GetAxisRaw ("Vertical") >= 0.001) {
-				GameDriver.Instance.questMenu.ChangeSelected (SelectDir.Up);	
-			} else if (Input.GetAxisRaw ("Vertical") <= -0.001) {
-				GameDriver.Instance.questMenu.ChangeSelected (SelectDir.Down);
-			}
-
-			if (Input.GetAxisRaw ("Vertical") >= 0.001) {
-				GameDriver.Instance.questMenu.TurnPage (TurnDir.Foward);	
-			} else if (Input.GetAxisRaw ("Vertical") <= -0.001) {
-				GameDriver.Instance.questMenu.TurnPage (TurnDir.Back);	
+				if (!horizontalPressed) {
+					if (Input.GetAxisRaw ("Horizontal") >= 0.001) {
+						GameDriver.Instance.questMenu.TurnPage (TurnDir.Foward);
+						horizontalPressed = true;
+					} else if (Input.GetAxisRaw ("Horizontal") <= -0.001) {
+						GameDriver.Instance.questMenu.TurnPage (TurnDir.Back);	
+						horizontalPressed = true;
+					}
+				}
 			}
 
 			break;
