@@ -20,18 +20,24 @@ public class UIQuestDescription : MonoBehaviour {
 	private Text status;
 
 	public void SetInfo(int questId){
-		Quest q = GameDriver.Instance.QuestsUnlocked [questId];
+		if (questId > 0 && questId < GameDriver.Instance.QuestsUnlocked.Count) {
+			Quest q = GameDriver.Instance.QuestsUnlocked [questId];
 
-		name.text = q.Name;
-		description.text = q.Description;
-		status.text = q.Status;
+			name.text = q.Name;
+			description.text = q.Description;
+			status.text = q.Status;
 
-		if (q.Status == "InProgress") {
-			status.color = inProgressColor;
-		} else if (q.Status == "Success") {
-			status.color = successColor;
-		} else if (q.Status == "Failed") {
-			status.color = failedColor;
+			if (q.Status == "InProgress") {
+				status.color = inProgressColor;
+			} else if (q.Status == "Success") {
+				status.color = successColor;
+			} else if (q.Status == "Failed") {
+				status.color = failedColor;
+			}
+			return;
 		}
+		name.text = "";
+		description.text = "";
+		status.text = "";
 	}
 }

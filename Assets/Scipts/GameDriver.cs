@@ -40,8 +40,8 @@ public class GameDriver : MonoBehaviour {
 	[Space(8)]
 
 	[Header("Quests")]
+	public UIQuestMenu questMenu;
 	public string questListPath;
-	public UIQuestList questMenu;
 
 	[Header("Testing")]
 	public string playerName = "Mel";
@@ -141,14 +141,17 @@ public class GameDriver : MonoBehaviour {
 
 	public void OpenQuestMenu(){
 		player.SetMovement (false);
+		Time.timeScale = 0f;
 		gameState = GameState.QuestMenu;
-		questMenu.ShowQuestList ();
+		questMenu.gameObject.SetActive (true);
+		questMenu.SetQuestPanels (0);
 	}
 
 	public void CloseQuestMenu(){
 		player.SetMovement (true);
+		Time.timeScale = 1f;
 		gameState = GameState.OverWorld;
-		questMenu.CloseMenu ();
+		questMenu.gameObject.SetActive (false);
 	}
 
 	public void StartDialogue(){

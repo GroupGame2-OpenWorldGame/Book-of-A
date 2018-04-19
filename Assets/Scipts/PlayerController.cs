@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	private bool selectKeyPressed =false;
 	private bool questKeyPressed = false;
 	private bool horizontalPressed = false;
+	private bool verticalPressed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -26,12 +27,12 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (selectKeyPressed) {
-			if (Input.GetAxis ("Select") == 0) {
+			if (Input.GetAxisRaw ("Select") == 0) {
 				selectKeyPressed = false;
 			}
 		}
 		if (questKeyPressed) {
-			if (Input.GetAxis ("QuestMenu") == 0) {
+			if (Input.GetAxisRaw ("QuestMenu") == 0) {
 				questKeyPressed = false;
 			}
 		}
@@ -63,12 +64,12 @@ public class PlayerController : MonoBehaviour {
 					gameDriver.ChangeHoveredOption (-1);
 					horizontalPressed = true;
 				}
-			} else if(Input.GetAxis("Horizontal") == 0){
+			} else if(Input.GetAxisRaw("Horizontal") == 0){
 				horizontalPressed = false;
 			}
 
 			if (!selectKeyPressed) {
-				if (Input.GetAxis ("Select") > 0) {
+				if (Input.GetAxisRaw ("Select") > 0) {
 					selectKeyPressed = true;
 					gameDriver.AdvanceDialogue ();
 				}
@@ -76,14 +77,31 @@ public class PlayerController : MonoBehaviour {
 			break;
 
 		case GameState.QuestMenu:
-			if (Input.GetAxis ("QuestMenu") != 0 && !questKeyPressed) {
-				questKeyPressed = true;
-				gameDriver.CloseQuestMenu ();
-				break;
+			if (Input.GetAxisRaw ("QuestMenu") != 0) {
+				if (!questKeyPressed) {
+					questKeyPressed = true;
+					gameDriver.CloseQuestMenu ();
+					break;
+				}
 			}
+
+
+			if (Input.GetAxisRaw ("Vertical") >= 0.001) {
+				GameDriver.Instance.questMenu.ChangeSelected (SelectDir.Up);	
+			} else if (Input.GetAxisRaw ("Vertical") <= -0.001) {
+				GameDriver.Instance.questMenu.ChangeSelected (SelectDir.Down);
+			}
+
+			if (Input.GetAxisRaw ("Vertical") >= 0.001) {
+				GameDriver.Instance.questMenu.TurnPage (TurnDir.Foward);	
+			} else if (Input.GetAxisRaw ("Vertical") <= -0.001) {
+				GameDriver.Instance.questMenu.TurnPage (TurnDir.Back);	
+			}
+
 			break;
 		}
 	}
+		
 
 	public void SetMovement(bool canMove){
 		playerMovement.enabled = canMove;
