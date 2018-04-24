@@ -10,30 +10,60 @@ public class Rain : MonoBehaviour
 
 	*/
 
-		float startDelay = 5f;
-		float repeatDelay = 15f;
+		//float startDelay = 5f;
+		//float repeatDelay = 15f;
+
+
 
 		public GameObject rainPrefab;
+
 		public bool continueCoroutine; //bool used to determine if coroutine will continue repeating or not 
+		float timer = 15f;
+		float tempTime;
 	//	public bool Raining;
+
+	void Awake()
+	{
+
+	}
 
 	void Start ()
 	{
-		InvokeRepeating ("Wait", startDelay, repeatDelay);
+		tempTime = timer; 
+		//InvokeRepeating ("Wait", startDelay, repeatDelay);
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
-		/*while (continueCoroutine == true)
-		{
-			yield return StartCoroutine("Wait");
-		}
-		*/
-	}
+		tempTime -= Time.deltaTime; 
 
+		if (tempTime <= 0) 
+		{
+			//rainPrefab.SetActive (!rainPrefab.activeSelf); 
+			tempTime = timer; 
+
+
+			/*
+			if (rainPrefab.activeInHierarchy)
+			{
+				rainPrefab.SetActive (false);
+			}
+
+			else
+			{
+				rainPrefab.SetActive(true);
+			}
+		//	Debug.Log (timer); 
+		}
+
+*/
+	}
+}
+			/*
 	IEnumerator Wait()
 	{
+	
 		// suspend execution for 10 seconds
 		yield return new WaitForSeconds(10);
 		print("Wait" + Time.time);
@@ -43,5 +73,7 @@ public class Rain : MonoBehaviour
 		rainPrefab.SetActive (false);
 
 	}
+
+*/
 
 }

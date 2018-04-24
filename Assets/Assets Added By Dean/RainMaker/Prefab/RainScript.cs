@@ -5,11 +5,14 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace DigitalRuby.RainMaker
 {
     public class RainScript : BaseRainScript
     {
+		public static RainScript instance = null;
+
         [Tooltip("The height above the camera that the rain will start falling from")]
         public float RainHeight = 25.0f;
 
@@ -18,6 +21,17 @@ namespace DigitalRuby.RainMaker
 
         [Tooltip("The top y value of the mist particles")]
         public float RainMistHeight = 3.0f;
+
+		void Awake()
+		{
+			if (instance == null) 
+
+				instance = this;
+				else if(instance != this)
+					Destroy(gameObject); 
+			
+		}
+
 
         private void UpdateRain()
         {
@@ -59,7 +73,7 @@ namespace DigitalRuby.RainMaker
 
         protected override void Start()
         {
-            base.Start();
+           base.Start();
         }
 
         protected override void Update()
