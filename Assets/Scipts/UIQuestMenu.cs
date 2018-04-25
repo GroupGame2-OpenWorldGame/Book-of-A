@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum SelectDir{
 	Up,
@@ -20,12 +21,16 @@ public class UIQuestMenu : MonoBehaviour {
 	private GameObject questList;
 	[SerializeField]
 	private GameObject questDecription;
+	[SerializeField]
+	private Text pageNumText;
 
 	[SerializeField]
 	private GameObject[] questPanels;
 
 	private int selectedPanel = 0;
 	private int pageNum = 0;
+	private int totalPages= 0;
+	private int questsOnPage = 4;
 
 	private bool flipping = false;
 	private bool settingInfo = false;
@@ -45,7 +50,7 @@ public class UIQuestMenu : MonoBehaviour {
 		}
 	}
 
-	public bool HasLeftPage{
+	/* public bool HasLeftPage{
 		get{
 			return hasLeftPage;
 		}
@@ -55,6 +60,12 @@ public class UIQuestMenu : MonoBehaviour {
 		get{
 			return hasRightPage;
 		}
+	} */
+
+	public void RefreshPageCount(){
+		totalPages = ((int)GameDriver.Instance.QuestsUnlocked.Count / 4) + ((GameDriver.Instance.QuestsUnlocked.Count % 4) == 0 ? 0 : 1) - 1;
+		Debug.Log ("Total Page Count : " + totalPages);
+		pageNumText.text = string.Format ("{0:00} / {1:00}", pageNum + 1, totalPages + 1);
 	}
 
 	void Awake(){
@@ -67,7 +78,7 @@ public class UIQuestMenu : MonoBehaviour {
 		if (dir == SelectDir.Up) {
 			selectedPanel = (int)Mathf.Max (0, selectedPanel - 1);
 		} else {
-			selectedPanel = (int)Mathf.Min (questPanels.Length - 1, selectedPanel + 1);
+			selectedPanel = (int)Mathf.Min (questsOnPage - 1, selectedPanel + 1);
 		}
 	
 		questPanels [selectedPanel].GetComponent<UIQuestPanel> ().Select (true);
@@ -75,22 +86,20 @@ public class UIQuestMenu : MonoBehaviour {
 	}
 
 	public void SetQuestPanels(int pageNum){
+		//pageNumText.text = string.Format ("{0:00} / {0:00}", pageNum + 1, totalPages);
 		Debug.Log ("SET CALLED");
-		hasLeftPage = (pageNum != 0);
 		settingInfo = true;
 		selectedPanel = 0;
-		int count = questPanels.Length;
+		questsOnPage = questPanels.Length;
 		int dif = GameDriver.Instance.QuestsUnlocked.Count - questPanels.Length * pageNum;
-		hasRightPage = (dif > questPanels.Length);
-		Debug.Log ("Has right page? : " + hasRightPage);
 		if (dif < questPanels.Length) {
 			for (int i = questPanels.Length - dif; i > 0; i--) {
 				questPanels [questPanels.Length - i].SetActive (false);
 			}
-			count = dif;
+			questsOnPage = dif;
 		} 
 
-		for (int i = 0; i < count; i++) {
+		for (int i = 0; i < questsOnPage; i++) {
 			questPanels [i].GetComponent<UIQuestPanel> ().QuestId = questPanels.Length * pageNum + i;
 		}
 
@@ -109,26 +118,25 @@ public class UIQuestMenu : MonoBehaviour {
 		flipping = true;
 		Debug.Log ("TURNPAGE HIT 1");
 		if (dir == TurnDir.Foward) {
-			Debug.Log ("TF: " + hasRightPage);
-			if (!hasRightPage) {
+			if (pageNum >= totalPages) {
 				flipping = false;
 				yield break;
-				Debug.Log ("NOTBREAK!!!");
 			}
 			questPanels [selectedPanel].GetComponent<UIQuestPanel> ().Select (false);
 			questList.SetActive (false);
 			questDecription.SetActive (false);
+			pageNumText.text = "";
 			bookAnimator.SetTrigger ("Flip");
 			pageNum++;
-		} else {
-			Debug.Log ("TB: " + hasLeftPage); 
-			if (!hasLeftPage) {
+		} else { 
+			if (pageNum <= 0) {
 				flipping = false;
 				yield break;
 			}
 			questPanels [selectedPanel].GetComponent<UIQuestPanel> ().Select (false);
 			questList.SetActive (false);
 			questDecription.SetActive (false);
+			pageNumText.text = "";
 			bookAnimator.SetTrigger ("FlipBack");
 			pageNum--;
 		}
@@ -138,6 +146,7 @@ public class UIQuestMenu : MonoBehaviour {
 
 		questList.SetActive (true);
 		questDecription.SetActive (true);
+		pageNumText.text = string.Format ("{0:00} / {1:00}", pageNum + 1, totalPages + 1);
 		SetQuestPanels (pageNum);
 
 		yield return new WaitWhile(() => settingInfo);
