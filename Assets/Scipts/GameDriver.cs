@@ -144,6 +144,7 @@ public class GameDriver : MonoBehaviour {
 		//player.SetMovement (false);
 		Time.timeScale = 0f;
 		gameState = GameState.QuestMenu;
+		questMenu.RefreshPageCount ();
 		questMenu.gameObject.SetActive (true);
 		questMenu.SetQuestPanels (0);
 	}

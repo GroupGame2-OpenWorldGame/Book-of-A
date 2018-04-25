@@ -35,6 +35,7 @@ public class UIQuestPanel : MonoBehaviour {
 
 		set{
 			questId = value;
+			Debug.Log (value);
 			questName.text = GameDriver.Instance.QuestsUnlocked [value].Name;
 			string status = GameDriver.Instance.QuestsUnlocked [value].Status;
 			if (status == "InProgress") {
