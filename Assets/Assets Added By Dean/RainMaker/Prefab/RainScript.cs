@@ -22,6 +22,10 @@ namespace DigitalRuby.RainMaker
         [Tooltip("The top y value of the mist particles")]
         public float RainMistHeight = 3.0f;
 
+		public Rain rainController;
+
+		public bool isRaining;
+
 		void Awake()
 		{
 			if (instance == null) 
@@ -38,6 +42,8 @@ namespace DigitalRuby.RainMaker
             // keep rain and mist above the player
             if (RainFallParticleSystem != null)
             {
+				base.isRaining = rainController.isRaining;
+
                 if (FollowCamera)
                 {
                     var s = RainFallParticleSystem.shape;

@@ -13,11 +13,11 @@ public class Rain : MonoBehaviour
 		//float startDelay = 5f;
 		//float repeatDelay = 15f;
 
-
+	public bool isRaining;
 
 		public GameObject rainPrefab;
 
-		public bool continueCoroutine; //bool used to determine if coroutine will continue repeating or not 
+	//	public bool continueCoroutine; //bool used to determine if coroutine will continue repeating or not 
 		float timer = 15f;
 		float tempTime;
 	//	public bool Raining;
@@ -42,7 +42,7 @@ public class Rain : MonoBehaviour
 		{
 			//rainPrefab.SetActive (!rainPrefab.activeSelf); 
 			tempTime = timer; 
-
+			isRaining = !isRaining;
 
 			/*
 			if (rainPrefab.activeInHierarchy)
