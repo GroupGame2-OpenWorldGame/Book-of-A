@@ -77,8 +77,6 @@ namespace DigitalRuby.RainMaker
         private float lastRainIntensityValue = -1.0f;
         private float nextWindTime;
 
-		public bool isRaining;
-
         private void UpdateWind()
         {
             if (EnableWind && WindZone != null && WindSpeedRange.y > 1.0f)
@@ -283,13 +281,6 @@ namespace DigitalRuby.RainMaker
             }
 
 #endif
-
-			if (isRaining) {
-				RainIntensity = 1;
-			} else {
-				RainIntensity = 0;
-			}
-
 
             CheckForRainChange();
             UpdateWind();
