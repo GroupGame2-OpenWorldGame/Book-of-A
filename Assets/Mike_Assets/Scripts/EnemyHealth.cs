@@ -42,4 +42,8 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		currentHealth -= damageDealt;
 	}
+
+	public void Hit(){
+		Debug.Log ("I HIT YOU"); 	
+	}
 }

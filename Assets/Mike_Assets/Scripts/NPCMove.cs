@@ -43,6 +43,8 @@ public class NPCMove : MonoBehaviour {
 
 	public Animator theAnimAI;
 
+	public bool attackingAnim;
+
 	// Use this for initialization
 	void Start () {
 		navAgent = this.GetComponent<NavMeshAgent> ();
@@ -95,6 +97,18 @@ public class NPCMove : MonoBehaviour {
 			}
 		} else {
 			FollowPlayer ();
+			if (seePlayer) {
+				theAnimAI.SetBool ("Walk", false);
+				theAnimAI.SetBool ("Run", true);
+			} else {
+				theAnimAI.SetBool ("Run", false);
+			}
+		} if (attackingAnim) {
+			theAnimAI.SetBool ("Walk", false);
+			theAnimAI.SetBool ("Run", false);
+			theAnimAI.SetBool ("Atk_R", true);
+		} else {
+			theAnimAI.SetBool ("Atk_R", false);
 		}
 	}
 
