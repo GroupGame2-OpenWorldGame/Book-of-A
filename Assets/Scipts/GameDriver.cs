@@ -146,13 +146,14 @@ public class GameDriver : MonoBehaviour {
 		gameState = GameState.QuestMenu;
 		questMenu.RefreshPageCount ();
 		questMenu.gameObject.SetActive (true);
-		questMenu.SetQuestPanels (0);
+		questMenu.State = MenuState.Pause;
 	}
 
 	public void CloseQuestMenu(){
 		//player.SetMovement (true);
 		Time.timeScale = 1f;
 		gameState = GameState.OverWorld;
+		questMenu.State = MenuState.Pause;
 		questMenu.gameObject.SetActive (false);
 	}
 
