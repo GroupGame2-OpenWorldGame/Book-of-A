@@ -315,6 +315,7 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1 &14409417
 GameObject:
@@ -347,24 +348,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &14898975
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1896439176}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.7033386
+      value: 154.43
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.235306
+      value: 8.002197
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -75.623726
+      value: -95.64
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -372,7 +375,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -384,7 +387,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_LocalScale.x
@@ -392,11 +395,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.41282862
+      value: 0.4128284
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73377117c82238747aa119d98857b76e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.41282862
+      value: 0.4128284
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73377117c82238747aa119d98857b76e, type: 3}
@@ -1029,6 +1032,14 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 38493171}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
+--- !u!1 &42656540
+=======
+--- !u!1 &40307800 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1071255097563052, guid: d153ef88b86ed8b44b0b91d7c6cf16dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1769900223}
 --- !u!1 &42656540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1095,95 @@ Camera:
   m_StereoSeparation: 0.022
 --- !u!4 &42656542
 Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 42656540}
+  m_LocalRotation: {x: -0.2525914, y: 0.14417483, z: 0.038093083, w: 0.9560126}
+  m_LocalPosition: {x: -42.543457, y: -101.22928, z: -354.3344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1013602911}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!45 &42656543
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 42656540}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
+--- !u!1 &43862973
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 42656542}
+  - component: {fileID: 42656541}
+  - component: {fileID: 42656543}
+  m_Layer: 0
+  m_Name: Water4Simple (1)ReflectionSceneCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &42656541
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 42656540}
+  m_Enabled: 0
+  serializedVersion: 2
+<<<<<<< HEAD
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967279
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &42656542
+Transform:
+=======
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &43862977
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43862973}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &45593849
+GameObject:
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1192,19 +1292,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 80393255}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -7.7422333
+=======
+      value: 215.4
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 7.5213795
+=======
+      value: 8.002199
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 9.307842
+=======
+      value: -39.9
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1224,6 +1340,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
@@ -1245,6 +1362,9 @@ Prefab:
     - target: {fileID: 1053150115920100, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_Name
       value: Logs1_PF (15)
+=======
+      value: 7
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
@@ -1812,6 +1932,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 26
 =======
   m_RootOrder: 11
@@ -1819,6 +1940,9 @@ Transform:
 =======
   m_RootOrder: 11
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 40
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: -82.66901, z: 0}
 --- !u!1 &89143985
 GameObject:
@@ -2360,11 +2484,6 @@ Transform:
   m_Father: {fileID: 700844412}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &103771401 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4047599558343718, guid: 160dbae1db7c8974ab27edcfcc55bb91,
-    type: 2}
-  m_PrefabInternal: {fileID: 344768053}
 --- !u!1 &111047935
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,7 +3952,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4162543004200696, guid: e1c76bb4a1dd80c4ca982c82b8320de9, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 6
+=======
+      value: 23
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1c76bb4a1dd80c4ca982c82b8320de9, type: 2}
@@ -4255,6 +4378,71 @@ Transform:
   m_Father: {fileID: 700844412}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!1001 &176905218
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 265.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.038989518
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.706031
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.706031
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.038989518
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8553863
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8553865
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8553865
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 186.32199
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7c625a21460e0db42adbeedaf6ecc61b, type: 3}
+  m_IsPrefabParent: 0
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &185950598
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,6 +4527,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 20
 =======
   m_RootOrder: 8
@@ -4346,6 +4535,9 @@ Transform:
 =======
   m_RootOrder: 8
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 35
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &188064911
 Prefab:
@@ -4558,6 +4750,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 18
 =======
   m_RootOrder: 6
@@ -4565,6 +4758,9 @@ Transform:
 =======
   m_RootOrder: 6
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 33
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: -85.65, z: 0}
 --- !u!114 &191252274
 MonoBehaviour:
@@ -4790,7 +4986,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 7
+=======
+      value: 24
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 114575672885037972, guid: 22080f273d2e6e84ab5ea4712b3bbbc6,
         type: 2}
@@ -4938,7 +5138,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 13
+=======
+      value: 27
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: spreadCustomCurve.m_RotationOrder
@@ -5770,7 +5974,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1013602911}
+<<<<<<< HEAD
   m_RootOrder: 11
+=======
+  m_RootOrder: 6
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!45 &241228063
 Skybox:
@@ -6104,6 +6312,7 @@ MeshFilter:
   m_GameObject: {fileID: 258821993}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &265402337
 Prefab:
   m_ObjectHideFlags: 0
@@ -6176,6 +6385,8 @@ Transform:
 >>>>>>> parent of da25354... Animals and Sounds
 =======
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &265718406
 GameObject:
   m_ObjectHideFlags: 0
@@ -7300,19 +7511,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 80393255}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -7.7422333
+=======
+      value: 156.9
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 1.2713795
+=======
+      value: 8.002197
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 17.867842
+=======
+      value: -95.13
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7320,7 +7547,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.z
@@ -7332,7 +7559,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 3
+=======
+      value: 54
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7340,11 +7571,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 1.9763896
+=======
+      value: 0.4128284
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 1.529679
+=======
+      value: 0.4128284
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalScale.x
@@ -7367,19 +7606,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 445045678}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 53.89151
+=======
+      value: 170.14383
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -43.02
+=======
+      value: 9.212
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 4.433338
+=======
+      value: -95.2265
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7399,15 +7654,32 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 39
+=======
+      value: 53
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 123896, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: tree02 (2)
+=======
+      value: Straw box (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 17.25
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c63ea781a273235439e583799176c846, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!4 &396236865 stripped
 Transform:
 <<<<<<< HEAD
@@ -7416,6 +7688,8 @@ Transform:
 =======
   m_PrefabParentObject: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
   m_PrefabInternal: {fileID: 745837091}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &393079036
 GameObject:
   m_ObjectHideFlags: 0
@@ -7425,7 +7699,6 @@ GameObject:
   m_Component:
   - component: {fileID: 393079038}
   - component: {fileID: 393079037}
-  - component: {fileID: 393079039}
   m_Layer: 0
   m_Name: RiverReflectionSceneCamera
   m_TagString: Untagged
@@ -7475,13 +7748,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 393079036}
-  m_LocalRotation: {x: 0.3005665, y: 0.2167458, z: 0.07033834, w: -0.9261391}
-  m_LocalPosition: {x: 2.6349485, y: 2.428543, z: -177.00327}
-  m_LocalScale: {x: 0.4578087, y: 1.0675524, z: 1.1283377}
+  m_LocalRotation: {x: -0.07784424, y: 0.92164814, z: 0.2524086, w: 0.2842444}
+  m_LocalPosition: {x: 160.63524, y: -33.313362, z: 7.3043327}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1685163559}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!45 &393079039
 Skybox:
   m_ObjectHideFlags: 0
@@ -7494,6 +7768,8 @@ Skybox:
 >>>>>>> parent of da25354... Animals and Sounds
 =======
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &398177798
 Prefab:
   m_ObjectHideFlags: 0
@@ -7862,19 +8138,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 80393255}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -7.7422333
+=======
+      value: 82.7
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 2.791378
+=======
+      value: 11
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -2.5421562
+=======
+      value: -1
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7894,7 +8186,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 6
+=======
+      value: 18
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7906,11 +8202,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 1.529679
+=======
+      value: 0.69654006
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 1.2030061
+=======
+      value: 4.5864553
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 1053150115920100, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_Name
@@ -8723,6 +9027,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 22
 =======
   m_RootOrder: 2
@@ -8730,6 +9035,9 @@ Transform:
 =======
   m_RootOrder: 2
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 28
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &446529365
 Prefab:
@@ -9428,6 +9736,7 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b6d08b71d0d306c4bb31f80a0e885be6, type: 3}
   m_PrefabInternal: {fileID: 479966685}
+<<<<<<< HEAD
 --- !u!1001 &482212572
 Prefab:
   m_ObjectHideFlags: 0
@@ -9490,6 +9799,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInternal: {fileID: 482212572}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &494982220
 Prefab:
   m_ObjectHideFlags: 0
@@ -10445,19 +10756,106 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 542678631}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1001 &545039650
+=======
+--- !u!1 &545548540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 545548542}
+  - component: {fileID: 545548541}
+  - component: {fileID: 545548543}
+  m_Layer: 0
+  m_Name: Water4SimpleReflectionSceneCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &545548541
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545548540}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967279
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &545548542
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545548540}
+  m_LocalRotation: {x: 0.15584001, y: 0.7430464, z: 0.18562853, w: -0.6238093}
+  m_LocalPosition: {x: 77.95595, y: -58.09952, z: -1.4586563}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1013602911}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!45 &545548543
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 545548540}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 16bc8a9d5451ca44d8f70575adbece3a, type: 2}
+--- !u!1001 &546625767
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 80393255}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -7.7422333
+=======
+      value: 254.2
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       value: 7.9013786
@@ -10467,10 +10865,17 @@ Prefab:
 =======
       value: 68.221245
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+      value: 14.57
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 5.8578415
+=======
+      value: -46.3
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.x
@@ -10490,19 +10895,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+=======
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477559710308698, guid: 7989ccf966a2dad449e2658c6f065a97, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.9810007
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 1.9763896
+=======
+      value: 2.981
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 1.529679
+=======
+      value: 2.981
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalScale.x
@@ -10678,6 +11099,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 550251096}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1001 &554423696
 Prefab:
   m_ObjectHideFlags: 0
@@ -10744,6 +11166,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_IsPrefabParent: 0
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &563055945
 GameObject:
   m_ObjectHideFlags: 0
@@ -10919,31 +11343,31 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1488581151}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 30.259216
+      value: 237.13
       objectReference: {fileID: 0}
     - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.3687677
+      value: 14.42
       objectReference: {fileID: 0}
     - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -119.74408
+      value: -118.56
       objectReference: {fileID: 0}
     - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_LocalRotation.w
@@ -10951,7 +11375,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 1861433029177932, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
       propertyPath: m_Name
@@ -11009,7 +11433,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4059232971022296, guid: 051a95bf487ff4f50a68072dd08b4ade, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4059232971022296, guid: 051a95bf487ff4f50a68072dd08b4ade, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -11277,6 +11701,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 15
 =======
   m_RootOrder: 4
@@ -11284,6 +11709,9 @@ Transform:
 =======
   m_RootOrder: 4
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 30
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &590386466
 Prefab:
@@ -11339,6 +11767,7 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 84905871107b9fe4d86fb053d4f75cd6, type: 3}
   m_PrefabInternal: {fileID: 590386466}
+<<<<<<< HEAD
 --- !u!1001 &592463581
 Prefab:
   m_ObjectHideFlags: 0
@@ -11405,6 +11834,10 @@ Transform:
   m_PrefabInternal: {fileID: 592463581}
 --- !u!1001 &603228034
 Prefab:
+=======
+--- !u!1 &608638381
+GameObject:
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -11471,19 +11904,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 445045678}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 119.23
+=======
+      value: 166.312
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -39.4
+=======
+      value: 9.337
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -30.81
+=======
+      value: -99.593
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalRotation.x
@@ -11491,7 +11940,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalRotation.z
@@ -11503,7 +11952,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 0
+=======
+      value: 11
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalRotation.y
@@ -11523,11 +11976,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 0.807066
+=======
+      value: 0.18440251
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 0.807066
+=======
+      value: 0.18440251
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
@@ -12069,6 +12530,7 @@ Transform:
   m_Father: {fileID: 1140880718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &646157331
 Prefab:
   m_ObjectHideFlags: 0
@@ -12131,6 +12593,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 485560, guid: d15b44addf30da74f946086ec0aa993c, type: 2}
   m_PrefabInternal: {fileID: 646157331}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &654923006
 GameObject:
   m_ObjectHideFlags: 0
@@ -12692,6 +13156,190 @@ Transform:
   m_Father: {fileID: 943889438}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!1001 &688951876
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 169.518
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.078
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -99.90675
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6860444
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.17129807
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.17129807
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6860444
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -61.961002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.00001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &691278776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1744007056942910, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 691278777}
+  - component: {fileID: 691278780}
+  - component: {fileID: 691278779}
+  - component: {fileID: 691278778}
+  m_Layer: 0
+  m_Name: OptionButton (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &691278777
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224683752295467330, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691278776}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 361288221}
+  m_Father: {fileID: 371053080}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -240, y: 0}
+  m_SizeDelta: {x: 120, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &691278778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114171323669799922, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691278776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.728}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 691278779}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 442472878}
+        m_MethodName: SelectOption
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &691278779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114966235509430470, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691278776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.78431374, g: 0.64705884, b: 0.49019608, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 12558acad19bfd048b7cfd99ffeab067, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &691278780
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222672255640619416, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691278776}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &700844411
 GameObject:
   m_ObjectHideFlags: 0
@@ -12873,6 +13521,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 19
 =======
   m_RootOrder: 7
@@ -12880,6 +13529,9 @@ Transform:
 =======
   m_RootOrder: 7
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 34
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &704389904
 Prefab:
@@ -13211,6 +13863,7 @@ Transform:
   m_Father: {fileID: 943889438}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &719227936
 Prefab:
   m_ObjectHideFlags: 0
@@ -13265,6 +13918,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 431114, guid: f62058cb710fd1745a24102fff0edd46, type: 2}
   m_PrefabInternal: {fileID: 719227936}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &726840468
 Prefab:
   m_ObjectHideFlags: 0
@@ -13588,19 +14243,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 445045678}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 459816, guid: aae542b8a65f39b49b008fa689ce9804, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -3.7660828
+=======
+      value: 186.86
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 459816, guid: aae542b8a65f39b49b008fa689ce9804, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -38.63
+=======
+      value: 9.99
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 459816, guid: aae542b8a65f39b49b008fa689ce9804, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -233.56369
+=======
+      value: 91.31
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 459816, guid: aae542b8a65f39b49b008fa689ce9804, type: 2}
       propertyPath: m_LocalRotation.x
@@ -13608,6 +14279,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 459816, guid: aae542b8a65f39b49b008fa689ce9804, type: 2}
       propertyPath: m_LocalRotation.y
+<<<<<<< HEAD
       value: -0.8221412
       objectReference: {fileID: 0}
     - target: {fileID: 459816, guid: aae542b8a65f39b49b008fa689ce9804, type: 2}
@@ -13659,6 +14331,9 @@ Prefab:
     - target: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
+=======
+      value: 0
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_LocalRotation.y
@@ -13674,7 +14349,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 67
+=======
+      value: 3
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 123896, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_Name
@@ -13981,6 +14660,67 @@ Transform:
   m_PrefabParentObject: {fileID: 4632031846521638, guid: cfb43f603a5d5224394921a118841f0c,
     type: 2}
   m_PrefabInternal: {fileID: 770483339}
+<<<<<<< HEAD
+=======
+--- !u!1001 &774784827
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 227.58215
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 14.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -105.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861433029177932, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_Name
+      value: NPC (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.4163079
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.4163077
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407102560815442, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.4163077
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 22080f273d2e6e84ab5ea4712b3bbbc6, type: 2}
+  m_IsPrefabParent: 0
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &776844536
 GameObject:
   m_ObjectHideFlags: 0
@@ -14463,6 +15203,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 11
 =======
       value: 1
@@ -14470,6 +15211,9 @@ Prefab:
 =======
       value: 1
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+      value: 26
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 224315710295753438, guid: dad29bf33b6f7f74bb62c714211573db,
         type: 2}
@@ -14911,6 +15655,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 806706578}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1001 &807193467
 Prefab:
   m_ObjectHideFlags: 0
@@ -14977,6 +15722,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInternal: {fileID: 807193467}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &808683205
 Prefab:
   m_ObjectHideFlags: 0
@@ -15145,7 +15892,11 @@ Skybox:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 815598969}
   m_Enabled: 1
+<<<<<<< HEAD
   m_CustomSkybox: {fileID: 0}
+=======
+  m_CustomSkybox: {fileID: 2100000, guid: cede08c9fc471e64884909cd4bbeaf59, type: 2}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!20 &815598971
 Camera:
   m_ObjectHideFlags: 0
@@ -15188,12 +15939,21 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 815598969}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -35.899998, y: -19.494999, z: -175.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 32
+=======
+  m_LocalRotation: {x: 0.014911958, y: 0.6796208, z: 0.013820713, w: -0.7332818}
+  m_LocalPosition: {x: -16.883398, y: 2.6800022, z: -23.134932}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 44
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818570044
 GameObject:
@@ -15519,19 +16279,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 445045678}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 40.551147
+=======
+      value: 236.68785
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -45.851997
+=======
+      value: 11.82
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 3.4495926
+=======
+      value: -116.698265
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -15551,7 +16327,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 43
+=======
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059232971022296, guid: 051a95bf487ff4f50a68072dd08b4ade, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -202.586
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_Name
@@ -15559,7 +16343,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 0.82641
+=======
+      value: 11.532471
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalScale.y
@@ -15567,7 +16355,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 0.82641
+=======
+      value: 11.532451
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
@@ -15644,11 +16436,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4643833291327998, guid: 731659826d907402eb4e019ef2e2f1d5, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 10
+=======
+      value: 25
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 731659826d907402eb4e019ef2e2f1d5, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!1001 &847353636
 Prefab:
   m_ObjectHideFlags: 0
@@ -15757,6 +16554,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ef768bd95f4570f4a9660649c3d26636, type: 3}
   m_PrefabInternal: {fileID: 851606772}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &854975250
 GameObject:
   m_ObjectHideFlags: 0
@@ -16068,6 +16867,7 @@ Transform:
   m_Father: {fileID: 10639653}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &871508931
 Prefab:
   m_ObjectHideFlags: 0
@@ -16197,6 +16997,8 @@ Transform:
   m_PrefabParentObject: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91,
     type: 2}
   m_PrefabInternal: {fileID: 871733739}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &873534384
 Prefab:
   m_ObjectHideFlags: 0
@@ -16856,6 +17658,67 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 895421269}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
+=======
+--- !u!1001 &899335424
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 188.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 78.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_RootOrder
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8194804
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8194801
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8194801
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+      propertyPath: m_Name
+      value: Fence Door (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d9791f4fd5803934591852a29f2bbd09, type: 3}
+  m_IsPrefabParent: 0
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &904363778
 GameObject:
   m_ObjectHideFlags: 0
@@ -16889,31 +17752,51 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 80393255}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -7.7422333
+=======
+      value: 250.66354
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 6.0513783
+=======
+      value: 14.3
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 2.6678429
+=======
+      value: -106.91664
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.z
+<<<<<<< HEAD
       value: 0.7071068
+=======
+      value: 0
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalRotation.w
@@ -16921,7 +17804,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 22
+=======
+      value: 16
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -17548,6 +18435,67 @@ Transform:
   m_Father: {fileID: 584144260}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0.81100005, y: 15.817, z: 0.629}
+<<<<<<< HEAD
+=======
+--- !u!1001 &936021028
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 218.38475
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.084555805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.99641883
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610000714264600, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_Name
+      value: Fence (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.4549124
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.4549127
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.4549124
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+  m_IsPrefabParent: 0
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &943316649
 Prefab:
   m_ObjectHideFlags: 0
@@ -17670,19 +18618,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 445045678}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -48.234283
+=======
+      value: 166.5362
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -37.4
+=======
+      value: 8.958
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -239.616
+=======
+      value: -96.754
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalRotation.x
@@ -17702,7 +18666,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 69
+=======
+      value: 12
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalRotation.y
@@ -17718,7 +18686,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalScale.x
+<<<<<<< HEAD
       value: 0.96861
+=======
+      value: 0.52606076
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalScale.y
@@ -17726,11 +18698,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalScale.z
+<<<<<<< HEAD
       value: 0.96861
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_Name
       value: Broadleaf_Desktop (5)
+=======
+      value: 0.52606076
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -17894,6 +18870,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958280375}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1001 &958829334
 Prefab:
   m_ObjectHideFlags: 0
@@ -17956,6 +18933,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 431114, guid: f62058cb710fd1745a24102fff0edd46, type: 2}
   m_PrefabInternal: {fileID: 958829334}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &968849467
 GameObject:
   m_ObjectHideFlags: 0
@@ -18758,16 +19737,20 @@ Transform:
   m_LocalPosition: {x: 95.11876, y: 45.786304, z: 68.25904}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 1971215962}
   - {fileID: 910716202}
   - {fileID: 1167156117}
   - {fileID: 871508932}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   - {fileID: 42656542}
   - {fileID: 545548542}
   - {fileID: 2127214317}
   - {fileID: 1017728122}
   - {fileID: 1401599451}
   - {fileID: 1709150206}
+<<<<<<< HEAD
   - {fileID: 1997209608}
 <<<<<<< HEAD
   - {fileID: 241228062}
@@ -18841,6 +19824,13 @@ Transform:
   m_PrefabParentObject: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91,
     type: 2}
   m_PrefabInternal: {fileID: 1013984247}
+=======
+  - {fileID: 241228062}
+  - {fileID: 1997209608}
+  m_Father: {fileID: 0}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1017728119
 GameObject:
   m_ObjectHideFlags: 0
@@ -18913,6 +19903,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1013602911}
+<<<<<<< HEAD
 =======
   - {fileID: 1685163559}
   m_Father: {fileID: 1098004340}
@@ -18921,6 +19912,9 @@ Transform:
 =======
 >>>>>>> parent of da25354... Animals and Sounds
   m_RootOrder: 7
+=======
+  m_RootOrder: 3
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1018786971
 GameObject:
@@ -19304,6 +20298,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4881670468422024, guid: e8ad581f3a696214d91fde278c6dde6d,
     type: 2}
   m_PrefabInternal: {fileID: 1036411362}
+<<<<<<< HEAD
 --- !u!1001 &1050846896
 Prefab:
   m_ObjectHideFlags: 0
@@ -19371,6 +20366,121 @@ Transform:
   m_PrefabParentObject: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91,
     type: 2}
   m_PrefabInternal: {fileID: 1050846896}
+=======
+--- !u!1 &1043982054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1986491835405568, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1043982055}
+  - component: {fileID: 1043982057}
+  - component: {fileID: 1043982056}
+  m_Layer: 0
+  m_Name: NPCPortBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1043982055
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224877894642801908, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043982054}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 139180901}
+  m_Father: {fileID: 575779172}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 299.9, y: 66.2}
+  m_SizeDelta: {x: 96.3, y: 96.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1043982056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114199145047892624, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043982054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.78431374, g: 0.64705884, b: 0.49019608, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 092ceff1bbcd54e42ab0a810e90475de, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1043982057
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222136307324331772, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043982054}
+--- !u!1 &1053795642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1053795643}
+  - component: {fileID: 1053795644}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1053795643
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053795642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -39.29, y: 4.97, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1053795644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1053795642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9063d139bf283d4479ca6a0df34acfb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1059281780
 GameObject:
   m_ObjectHideFlags: 0
@@ -20308,7 +21418,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 21
+=======
+  m_RootOrder: 36
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1080923995
 GameObject:
@@ -20487,6 +21601,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 28
 =======
   m_RootOrder: 12
@@ -20494,6 +21609,9 @@ Transform:
 =======
   m_RootOrder: 12
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 42
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1087622918
 Prefab:
@@ -20654,11 +21772,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4750941656993402, guid: 91a1135e8d778604dbdf0ab7e707d5b2, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 3
+=======
+      value: 20
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91a1135e8d778604dbdf0ab7e707d5b2, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!1001 &1090591486
 Prefab:
   m_ObjectHideFlags: 0
@@ -20725,6 +21848,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInternal: {fileID: 1090591486}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1096820896
 GameObject:
   m_ObjectHideFlags: 0
@@ -20839,6 +21964,7 @@ Transform:
   - {fileID: 726840469}
   - {fileID: 398177799}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 851606773}
   m_Father: {fileID: 0}
   m_RootOrder: 25
@@ -20854,6 +21980,10 @@ Transform:
 >>>>>>> parent of da25354... Animals and Sounds
 =======
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_Father: {fileID: 0}
+  m_RootOrder: 39
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1099058557
 GameObject:
@@ -21048,6 +22178,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 33
 =======
   m_RootOrder: 14
@@ -21055,6 +22186,9 @@ Transform:
 =======
   m_RootOrder: 14
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 45
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1114067378 stripped
 Transform:
@@ -21065,19 +22199,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 445045678}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -29.86737
+=======
+      value: 65.81
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -37.42
+=======
+      value: 12.58
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -226.50568
+=======
+      value: -59.81
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -21109,19 +22259,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalScale.y
+<<<<<<< HEAD
       value: 0.71344
+=======
+      value: 1.7932928
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.82641
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -110.59901
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!4 &1117632596 stripped
@@ -21136,6 +22294,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6245ae7771f9b2448a47de44f2afc323, type: 3}
   m_PrefabInternal: {fileID: 688951876}
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1118314945
 GameObject:
   m_ObjectHideFlags: 0
@@ -21712,6 +22872,51 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1136199658}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
+=======
+--- !u!1001 &1137745453
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 170.14383
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.403
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -95.2265
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3ff147cd03227b8458017a17705437a6, type: 3}
+  m_IsPrefabParent: 0
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1138479781
 GameObject:
   m_ObjectHideFlags: 0
@@ -22224,31 +23429,31 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1098004340}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 470886, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -265.10236
+      value: -72.11163
       objectReference: {fileID: 0}
     - target: {fileID: 470886, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 117.1304
+      value: 63.47916
       objectReference: {fileID: 0}
     - target: {fileID: 470886, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 180.15216
+      value: 165.39722
       objectReference: {fileID: 0}
     - target: {fileID: 470886, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 470886, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 470886, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 470886, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: m_LocalRotation.w
@@ -22256,7 +23461,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 470886, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: RainIntensity
@@ -22350,6 +23555,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1154736658}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1001 &1163246421
 Prefab:
   m_ObjectHideFlags: 0
@@ -22405,23 +23611,42 @@ Transform:
   m_PrefabParentObject: {fileID: 485560, guid: d15b44addf30da74f946086ec0aa993c, type: 2}
   m_PrefabInternal: {fileID: 1163246421}
 --- !u!1001 &1164261272
+=======
+--- !u!1001 &1169548264
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 445045678}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 53.992
+=======
+      value: 164.74591
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -45.851997
+=======
+      value: 8.002197
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 28.657
+=======
+      value: -90.35239
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -22441,11 +23666,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_Name
       value: Conifer_Desktop (17)
+=======
+      value: 13
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
       propertyPath: m_LocalScale.x
@@ -23074,7 +24303,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 16
+=======
+  m_RootOrder: 31
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1198758610
 Prefab:
@@ -23223,6 +24456,63 @@ Transform:
   m_Father: {fileID: 700844412}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -32.673, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!1001 &1208528470
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 165.45166
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 9.354
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -99.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5774581
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.577458
+      objectReference: {fileID: 0}
+    - target: {fileID: 435472, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.577458
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ef38d3499dcba334a80ae183106f984e, type: 2}
+  m_IsPrefabParent: 0
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1213694761
 GameObject:
   m_ObjectHideFlags: 0
@@ -23289,7 +24579,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4128450239430558, guid: c157e1492c1aa6e4fa59bd6badf7042b, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 4
+=======
+      value: 21
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c157e1492c1aa6e4fa59bd6badf7042b, type: 2}
@@ -25128,6 +26422,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1300532786}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1001 &1300891114
 Prefab:
   m_ObjectHideFlags: 0
@@ -25261,6 +26556,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInternal: {fileID: 1304171000}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1305157894
 GameObject:
   m_ObjectHideFlags: 0
@@ -25846,7 +27143,7 @@ Transform:
   - {fileID: 1924487288}
   - {fileID: 740613630}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> parent of da25354... Animals and Sounds
 --- !u!1 &1325836819
@@ -26030,6 +27327,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4632031846521638, guid: cfb43f603a5d5224394921a118841f0c,
     type: 2}
   m_PrefabInternal: {fileID: 1332934267}
+<<<<<<< HEAD
 --- !u!1001 &1335945945
 Prefab:
   m_ObjectHideFlags: 0
@@ -26182,6 +27480,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1349989924
 GameObject:
   m_ObjectHideFlags: 0
@@ -26660,6 +27960,71 @@ Transform:
   m_PrefabParentObject: {fileID: 4605997215203274, guid: 3ab164258b5613d4caa3f570831d4ca7,
     type: 2}
   m_PrefabInternal: {fileID: 1386850626}
+--- !u!1 &1387610873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1387610875}
+  - component: {fileID: 1387610874}
+  m_Layer: 0
+  m_Name: Water4AdvancedReflectionSceneCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &1387610874
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387610873}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967279
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1387610875
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387610873}
+  m_LocalRotation: {x: -0.09240712, y: 0.84754664, z: 0.15712762, w: 0.49843416}
+  m_LocalPosition: {x: 138.26917, y: -10.52784, z: -52.86078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1393164261 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4412699943048614, guid: 0c8028175268c7e418817c4298748b2b,
@@ -26872,7 +28237,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1013602911}
+<<<<<<< HEAD
   m_RootOrder: 8
+=======
+  m_RootOrder: 4
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1402697682
 Prefab:
@@ -27648,7 +29017,7 @@ Transform:
   - {fileID: 1632699524}
   - {fileID: 995609221}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> parent of da25354... Animals and Sounds
 --- !u!1 &1436794514
@@ -28300,6 +29669,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 14
 =======
   m_RootOrder: 3
@@ -28307,6 +29677,9 @@ Transform:
 =======
   m_RootOrder: 3
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 29
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1468320987
 Prefab:
@@ -28628,6 +30001,7 @@ Transform:
   m_LocalPosition: {x: 304.8, y: 279.1, z: 233.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 27
@@ -28707,6 +30081,12 @@ Transform:
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1489101134
 GameObject:
   m_ObjectHideFlags: 0
@@ -29869,10 +31249,49 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aae542b8a65f39b49b008fa689ce9804, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!4 &1521128488 stripped
 Transform:
   m_PrefabParentObject: {fileID: 459816, guid: aae542b8a65f39b49b008fa689ce9804, type: 2}
   m_PrefabInternal: {fileID: 1521128487}
+=======
+--- !u!1 &1521312753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1844410148675150, guid: 994aea5f0717bd744b1794bd1361ab7a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 822667855}
+  - component: {fileID: 1521312754}
+  m_Layer: 5
+  m_Name: QuestMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1521312754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1521312753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648b9db6d2fdbfd43ae3d9c483fdebf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bookAnimator: {fileID: 162663936}
+  questList: {fileID: 1079763468}
+  questDecription: {fileID: 1580334840}
+  questPanels:
+  - {fileID: 1323360296}
+  - {fileID: 1860201742}
+  - {fileID: 711055734}
+  - {fileID: 40307800}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &1528502712
 Prefab:
   m_ObjectHideFlags: 0
@@ -31280,6 +32699,7 @@ Transform:
   m_Father: {fileID: 943889438}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &1584955684
 Prefab:
   m_ObjectHideFlags: 0
@@ -31354,6 +32774,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
   m_PrefabInternal: {fileID: 1584955684}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1586414254
 GameObject:
   m_ObjectHideFlags: 0
@@ -32860,7 +34282,11 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 341ccf110cd280249b2c02da1f864a7d, type: 3}
   m_PrefabInternal: {fileID: 1639776041}
+<<<<<<< HEAD
 --- !u!1001 &1645495038
+=======
+--- !u!1001 &1645592796
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -32984,11 +34410,14 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!4 &1647893563 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91,
     type: 2}
   m_PrefabInternal: {fileID: 1647893562}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &1649401313
 Prefab:
   m_ObjectHideFlags: 0
@@ -33324,6 +34753,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4913353921665142, guid: 5701a584e276bba438e4a5f5f02780a4,
     type: 2}
   m_PrefabInternal: {fileID: 1657537618}
+<<<<<<< HEAD
 --- !u!1001 &1658808875
 Prefab:
   m_ObjectHideFlags: 0
@@ -33386,6 +34816,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
   m_PrefabInternal: {fileID: 1658808875}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &1661809279
 Prefab:
   m_ObjectHideFlags: 0
@@ -33666,6 +35098,14 @@ Transform:
   m_Father: {fileID: 189772277}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!4 &1671613807 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4573618813689396, guid: 275a97af8e4214316b4bc517f584c747,
+    type: 2}
+  m_PrefabInternal: {fileID: 733781345}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1672332892
 GameObject:
   m_ObjectHideFlags: 0
@@ -33697,6 +35137,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 24
 =======
   m_RootOrder: 9
@@ -33704,6 +35145,9 @@ Transform:
 =======
   m_RootOrder: 9
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 38
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1672791588
 Prefab:
@@ -34036,6 +35480,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8ad581f3a696214d91fde278c6dde6d, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 --- !u!1001 &1683830370
 Prefab:
   m_ObjectHideFlags: 0
@@ -34098,6 +35543,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInternal: {fileID: 1683830370}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &1684755154
 Prefab:
   m_ObjectHideFlags: 0
@@ -34222,6 +35669,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224142588859408510, guid: d153ef88b86ed8b44b0b91d7c6cf16dd,
     type: 2}
   m_PrefabInternal: {fileID: 1684755154}
+<<<<<<< HEAD
 --- !u!1001 &1688663843
 Prefab:
   m_ObjectHideFlags: 0
@@ -34338,6 +35786,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 431114, guid: f62058cb710fd1745a24102fff0edd46, type: 2}
   m_PrefabInternal: {fileID: 1689765439}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1690942446
 GameObject:
   m_ObjectHideFlags: 0
@@ -34506,6 +35956,7 @@ Transform:
   m_PrefabInternal: {fileID: 1708217731}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1709112962
 =======
 --- !u!1001 &1720269354
@@ -34567,6 +36018,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_IsPrefabParent: 0
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1709150203
 GameObject:
   m_ObjectHideFlags: 0
@@ -34631,6 +36084,9 @@ Camera:
 --- !u!4 &1709150206
 Transform:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -34640,10 +36096,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1013602911}
+<<<<<<< HEAD
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &1720269354
 Prefab:
   m_ObjectHideFlags: 0
@@ -36116,6 +37577,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 30
 =======
   m_RootOrder: 13
@@ -36123,6 +37585,9 @@ Transform:
 =======
   m_RootOrder: 13
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 43
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1791731557
 Prefab:
@@ -36442,6 +37907,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4002098813547450, guid: 6a9bdc72a5293d54bab5c93cc95855b2,
     type: 2}
   m_PrefabInternal: {fileID: 764086363}
+<<<<<<< HEAD
 --- !u!1001 &1807519805
 Prefab:
   m_ObjectHideFlags: 0
@@ -36632,6 +38098,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInternal: {fileID: 1809291538}
+=======
+--- !u!1 &1808976649 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 160098, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
+  m_PrefabInternal: {fileID: 1161989277}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1812834793
 GameObject:
   m_ObjectHideFlags: 0
@@ -38671,6 +40143,7 @@ Transform:
   m_Father: {fileID: 700844412}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: -9.675, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &1894353130
 Prefab:
   m_ObjectHideFlags: 0
@@ -38738,6 +40211,8 @@ Transform:
   m_PrefabParentObject: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91,
     type: 2}
   m_PrefabInternal: {fileID: 1894353130}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &1894968799
 Prefab:
   m_ObjectHideFlags: 0
@@ -38796,6 +40271,7 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 2d1adb2d313640f429942b696657c58f, type: 3}
   m_PrefabInternal: {fileID: 1894968799}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 --- !u!1 &1896439175
@@ -38862,6 +40338,8 @@ Transform:
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1899244580
 GameObject:
   m_ObjectHideFlags: 0
@@ -38947,6 +40425,7 @@ MeshFilter:
   m_GameObject: {fileID: 1899244580}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1910597158 stripped
+<<<<<<< HEAD
 Transform:
   m_PrefabParentObject: {fileID: 4881670468422024, guid: e8ad581f3a696214d91fde278c6dde6d,
     type: 2}
@@ -39014,6 +40493,8 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: c0a11e3fcfb4048f58d6593443d8db91, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1911923579 stripped
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 Transform:
   m_PrefabParentObject: {fileID: 4859848989733182, guid: c0a11e3fcfb4048f58d6593443d8db91,
     type: 2}
@@ -39215,10 +40696,45 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 84905871107b9fe4d86fb053d4f75cd6, type: 3}
   m_PrefabInternal: {fileID: 1922545016}
+<<<<<<< HEAD
 --- !u!1001 &1941458336
 Prefab:
+=======
+--- !u!1 &1924487287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1924487288}
+  - component: {fileID: 1924487289}
+  m_Layer: 0
+  m_Name: Boundary_Wall (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1924487288
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1924487287}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 486.87512, y: -9.279285, z: -150.51161}
+  m_LocalScale: {x: 3.973196, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1325057312}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1924487289
+BoxCollider:
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< HEAD
   m_Modification:
     m_TransformParent: {fileID: 445045678}
     m_Modifications:
@@ -39269,6 +40785,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 418198, guid: 393b236c42954a640b513d46de90ac38, type: 2}
   m_PrefabInternal: {fileID: 1941458336}
+=======
+  m_Size: {x: 250, y: 200, z: 100}
+  m_Center: {x: -20, y: 0, z: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &1941717618
 GameObject:
   m_ObjectHideFlags: 0
@@ -40098,24 +41618,44 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1978987177}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1001 &1985114583
+=======
+--- !u!1001 &1985120549
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 1872526145}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 4617024283915500, guid: 1b310701d104d4a6788b51e9de7afe62, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 6.3447723
+=======
+      value: 276.50128
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4617024283915500, guid: 1b310701d104d4a6788b51e9de7afe62, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 2.4681034
+=======
+      value: 8.002193
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4617024283915500, guid: 1b310701d104d4a6788b51e9de7afe62, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: -3.9353466
+=======
+      value: 84.13306
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4617024283915500, guid: 1b310701d104d4a6788b51e9de7afe62, type: 2}
       propertyPath: m_LocalRotation.x
@@ -40135,7 +41675,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4617024283915500, guid: 1b310701d104d4a6788b51e9de7afe62, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 2
+=======
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610000714264600, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_Name
+      value: Fence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370465769992610, guid: 63f99835c51117b49bb16bc6d7c2f6b9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 6.1190004
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b310701d104d4a6788b51e9de7afe62, type: 2}
@@ -40709,7 +42261,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 10
+=======
+      value: 7
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bcae914220acd4907840a029bb9d9aec, type: 2}
       propertyPath: m_LocalScale.x
@@ -40922,6 +42478,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 17
 =======
   m_RootOrder: 5
@@ -40929,6 +42486,9 @@ Transform:
 =======
   m_RootOrder: 5
 >>>>>>> parent of da25354... Animals and Sounds
+=======
+  m_RootOrder: 32
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2008366045
 GameObject:
@@ -41229,7 +42789,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4218038027281340, guid: 7af605898a936984080850467d40dabc, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 5
+=======
+      value: 22
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7af605898a936984080850467d40dabc, type: 2}
@@ -41534,19 +43098,35 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
     m_TransformParent: {fileID: 80393255}
+=======
+    m_TransformParent: {fileID: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_Modifications:
     - target: {fileID: 4217833823072598, guid: 26b462eb27ae41641ad37d55bde31499, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: 56.857758
+=======
+      value: 227.14
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4217833823072598, guid: 26b462eb27ae41641ad37d55bde31499, type: 2}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -16.458622
+=======
+      value: 11.8
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4217833823072598, guid: 26b462eb27ae41641ad37d55bde31499, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 47.056107
+=======
+      value: -103.9
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     - target: {fileID: 4217833823072598, guid: 26b462eb27ae41641ad37d55bde31499, type: 2}
       propertyPath: m_LocalRotation.x
@@ -41566,7 +43146,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4217833823072598, guid: 26b462eb27ae41641ad37d55bde31499, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 1
+=======
+      value: 17
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26b462eb27ae41641ad37d55bde31499, type: 2}
@@ -41582,6 +43166,7 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 173.40851
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 445910, guid: c63ea781a273235439e583799176c846, type: 2}
       propertyPath: m_LocalPosition.y
       value: -42.872734
@@ -41610,9 +43195,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 31
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c63ea781a273235439e583799176c846, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!4 &2057421921 stripped
@@ -41694,6 +43282,8 @@ Transform:
   m_PrefabParentObject: {fileID: 4217833823072598, guid: 26b462eb27ae41641ad37d55bde31499,
     type: 2}
   m_PrefabInternal: {fileID: 2057301117}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1001 &2071055672
 Prefab:
   m_ObjectHideFlags: 0
@@ -41756,6 +43346,7 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7b5f2f9ea19c74c659ab8ac969280fb2, type: 2}
   m_PrefabInternal: {fileID: 2071055672}
+<<<<<<< HEAD
 --- !u!1001 &2071666210
 Prefab:
   m_ObjectHideFlags: 0
@@ -41946,6 +43537,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 459816, guid: aae542b8a65f39b49b008fa689ce9804, type: 2}
   m_PrefabInternal: {fileID: 2077289920}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &2084420841 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -42975,6 +44568,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1013602911}
+<<<<<<< HEAD
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2129884934
@@ -43110,6 +44704,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInternal: {fileID: 2130680832}
+=======
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &2133954720
 GameObject:
   m_ObjectHideFlags: 0
@@ -43194,6 +44792,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133954720}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1001 &2134163242
 Prefab:
   m_ObjectHideFlags: 0
@@ -43260,6 +44859,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400016, guid: 469edab27ab6d004d84af2c4a851bd7f, type: 3}
   m_PrefabInternal: {fileID: 2134163242}
+=======
+>>>>>>> parent of 4bd80c8... Organized Hierarchy and Modeled Village More
 --- !u!1 &2134243143
 GameObject:
   m_ObjectHideFlags: 0
