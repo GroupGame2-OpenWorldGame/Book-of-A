@@ -22,6 +22,8 @@ namespace DigitalRuby.RainMaker
         [Tooltip("The top y value of the mist particles")]
         public float RainMistHeight = 3.0f;
 
+		public Rain theRain;
+
 		void Awake()
 		{
 			if (instance == null) 
@@ -79,6 +81,12 @@ namespace DigitalRuby.RainMaker
         protected override void Update()
         {
             base.Update();
+
+			if (theRain.isRaining) {
+				base.RainIntensity = 1;
+			} else {
+				base.RainIntensity = 0;
+			}
 
             UpdateRain();
         }

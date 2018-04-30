@@ -2343,6 +2343,7 @@ MonoBehaviour:
   player: {fileID: 0}
   thisIsTriggerTarget: {fileID: 0}
   theAnimAI: {fileID: 95833774214432026}
+  attackingAnim: 0
 --- !u!114 &114263635726146716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2412,6 +2413,8 @@ MonoBehaviour:
   questEnemy: 0
   aggressive: 0
   playerZone: {fileID: 1938084955569456}
+  theAM: {fileID: 114212050939353620}
+  theNM: {fileID: 0}
 --- !u!114 &114707146290043710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2441,6 +2444,8 @@ MonoBehaviour:
   thePH: {fileID: 0}
   theEA: {fileID: 114055524458280596}
   readyToAttack: 0
+  theEnemy: {fileID: 0}
+  theAgent: {fileID: 114212050939353620}
 --- !u!114 &114932766148234602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2462,7 +2467,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643425325769438}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.78
@@ -2474,7 +2479,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643425325769438}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.78

@@ -6,6 +6,8 @@ using UnityEngine.Animations;
 
 public class NPCMove : MonoBehaviour {
 
+	private NPCMove thisScript;
+
 	[SerializeField]
 	private Transform destination;
 
@@ -47,6 +49,12 @@ public class NPCMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (player == null) {
+			player = GameObject.FindGameObjectWithTag ("Player");
+		}
+
+		thisScript = this.GetComponent <NPCMove> ();
+
 		navAgent = this.GetComponent<NavMeshAgent> ();
 
 		if (randomPatrol && !patroling) {
@@ -70,7 +78,13 @@ public class NPCMove : MonoBehaviour {
 
 	void Update()
 	{
+		if (player == null) {
+			player = GameObject.FindGameObjectWithTag ("Player");
+		}
+
 		if (!seePlayer) {
+			theAnimAI.SetBool ("Run", false);
+			theAnimAI.SetBool ("Attack", false);
 			if (isMovingTarget) {
 				SetDestination ();
 			}
@@ -98,17 +112,15 @@ public class NPCMove : MonoBehaviour {
 		} else {
 			FollowPlayer ();
 			if (seePlayer) {
-				theAnimAI.SetBool ("Walk", false);
 				theAnimAI.SetBool ("Run", true);
 			} else {
 				theAnimAI.SetBool ("Run", false);
 			}
 		} if (attackingAnim) {
-			theAnimAI.SetBool ("Walk", false);
-			theAnimAI.SetBool ("Run", false);
-			theAnimAI.SetBool ("Atk_R", true);
+			theAnimAI.SetBool ("Attack", true);
+			attackingAnim = false;
 		} else {
-			theAnimAI.SetBool ("Atk_R", false);
+			theAnimAI.SetBool ("Attack", false);
 		}
 	}
 
@@ -155,5 +167,11 @@ public class NPCMove : MonoBehaviour {
 	void FollowPlayer()
 	{
 		navAgent.SetDestination (player.transform.position);
+	}
+
+	public void Die()
+	{
+		theAnimAI.SetBool ("Die", true);
+		thisScript.enabled = false;
 	}
 }

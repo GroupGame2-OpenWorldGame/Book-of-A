@@ -41,17 +41,16 @@ public class Attack : MonoBehaviour {
 				timeToAttack = attackDelay;
 			}
 
-			if (canAttack) {
+			if (canAttack && !isAttacking) {
 				if (Input.GetAxisRaw ("Fire1") >= 0.01f) {
+					theAT.attack = true;
 					isAttacking = true;
 				}
 			}
 
 			if (isAttacking) {
-				theAT.attack = true;
 				attackingTime -= Time.deltaTime;
 				if (attackingTime <= 0) {
-					theAT.attack = false;
 					isAttacking = false;
 					canAttack = false;
 					attackingTime = attackSpeed;
