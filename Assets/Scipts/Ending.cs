@@ -35,11 +35,12 @@ public class Ending : MonoBehaviour {
 	private string endingAll;
 	[Space(8)]
 
-	[Header("UI")]
+	[Header("UI-Ending")]
 	public Text endingText;
 	public Text flag1Mark;
 	public Text flag2Mark;
 	public Text flag3Mark;
+
 
 	// Use this for initialization
 	void Start () {
