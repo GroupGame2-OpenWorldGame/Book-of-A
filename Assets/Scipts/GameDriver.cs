@@ -11,11 +11,13 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public enum GameState{
 	OverWorld,
 	Dialogue,
-	QuestMenu
+	QuestMenu,
+	GameOver
 }
 
 //TODO: Set Cursor LockStates later
@@ -42,6 +44,11 @@ public class GameDriver : MonoBehaviour {
 	[Header("Quests")]
 	public UIQuestMenu questMenu;
 	public string questListPath;
+	[Space(8)]
+
+	[Header("Game Over")]
+	public GameObject gameOverScreen;
+	public GameObject[] gameOverButtons;
 
 	[Header("Testing")]
 	public string playerName = "Mel";
@@ -155,6 +162,11 @@ public class GameDriver : MonoBehaviour {
 		gameState = GameState.OverWorld;
 		questMenu.State = MenuState.Pause;
 		questMenu.gameObject.SetActive (false);
+	}
+
+	public void StartGameOver(){
+		SceneManager.LoadScene ("GameOver", LoadSceneMode.Single);
+		Destroy (this.gameObject);
 	}
 
 	public void StartDialogue(){
