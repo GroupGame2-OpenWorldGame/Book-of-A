@@ -47,8 +47,7 @@ public class GameDriver : MonoBehaviour {
 	[Space(8)]
 
 	[Header("Game Over")]
-	public GameObject gameOverScreen;
-	public GameObject[] gameOverButtons;
+	public GameObject gameOverFade;
 
 	[Header("Testing")]
 	public string playerName = "Mel";
@@ -165,6 +164,7 @@ public class GameDriver : MonoBehaviour {
 	}
 
 	public void StartGameOver(){
+		gameOverFade.SetActive (true);
 		SceneManager.LoadScene ("GameOver", LoadSceneMode.Single);
 		Destroy (this.gameObject);
 	}
