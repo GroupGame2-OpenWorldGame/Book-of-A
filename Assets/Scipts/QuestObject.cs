@@ -12,9 +12,13 @@ public class QuestObject : MonoBehaviour {
 	private MonoBehaviour[] components;
 
 	[SerializeField]
+	private GameObject interactSprite;
+
+	[SerializeField]
 	private bool startActive = false;
 
 	void Awake(){
+		interactSprite.SetActive (false);
 		SetActive (startActive);
 	}
 
@@ -41,6 +45,18 @@ public class QuestObject : MonoBehaviour {
 	public void Collect(){
 		GameDriver.Instance.SetCounter (counterToAddTo, "Add", valueToAdd.ToString ());
 		Destroy (this.gameObject);
+	}
+
+	void OnTriggerEnter(Collider other){
+		if (other.gameObject.tag == "Player") {
+			interactSprite.SetActive(true);
+		}
+	}
+
+	void OnTriggerExit(Collider other){
+		if (other.gameObject.tag == "Player") {
+			interactSprite.SetActive(false);
+		}
 	}
 
 }
