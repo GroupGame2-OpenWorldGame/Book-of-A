@@ -48,6 +48,9 @@ public class GameDriver : MonoBehaviour {
 	public GameObject lastNPC;
 	[Space(8)]
 
+	[Header("Audio")]
+	public AudioSource gameAudioPlayer;
+
 	[Header("Game Over")]
 	public GameObject gameOverFade;
 
@@ -173,9 +176,11 @@ public class GameDriver : MonoBehaviour {
 	}
 
 	public void StartGameOver(){
+		gameAudioPlayer.Play ();
 		gameOverFade.SetActive (true);
 		SceneManager.LoadScene ("GameOver", LoadSceneMode.Single);
-		Destroy (this.gameObject);
+		instance = null;
+		Destroy (this.gameObject, 2f);
 	}
 
 	public void ReturnToTitle(){

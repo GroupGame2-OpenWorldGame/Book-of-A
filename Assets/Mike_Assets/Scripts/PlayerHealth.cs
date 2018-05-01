@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour {
 		healthBar.value = currentHealth;
 
 		if (currentHealth <= 0) {
-			Debug.Log ("kill player");
+			GameDriver.Instance.StartGameOver ();
 		}
 	}
 
