@@ -35,15 +35,40 @@ public class Ending : MonoBehaviour {
 	private string endingAll;
 	[Space(8)]
 
+	[Header("Book")]
+	public Animator bookAnimator;
+
 	[Header("UI-Ending")]
+	public GameObject page1;
 	public Text endingText;
 	public Text flag1Mark;
 	public Text flag2Mark;
 	public Text flag3Mark;
+	[Space(8)]
+
+	[Header("Ending Menu")]
+	public GameObject page2;
+	public GameObject[] endingButtons1;
+	[Space(8)]
+
+	[Header("Credits Page")]
+	public GameObject page3;
+	public GameObject[] endingButtons2;
+
+	private int page = 1;
+	private int selectedButton = 0;
+	private GameObject[] activeButtons;
+	private bool flipping = false;
+	private GameObject currentPage;
+	private bool verticalPress = false;
 
 
 	// Use this for initialization
 	void Start () {
+		currentPage = page1;
+		page1.SetActive (true);
+		page2.SetActive (false);
+		page3.SetActive (false);
 		SetEnding ();
 	}
 
@@ -127,6 +152,67 @@ public class Ending : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!flipping) {
+			if (Input.GetAxis ("Select") >= 0.01) {
+				if (page == 1) {
+					flipping = true;
+					StartCoroutine ("TurnPage");
+				} else {
+					EventSystem.current.currentSelectedGameObject.GetComponent<Button> ().onClick.Invoke ();
+				}
+			}
+
+			if (!verticalPress) {
+				if (Input.GetAxis ("Vertical") >= 0.01) {
+					selectedButton = (int)Mathf.Max (0, selectedButton - 1);
+					EventSystem.current.SetSelectedGameObject (activeButtons [selectedButton]);
+					verticalPress = true;
+				} else if (Input.GetAxis ("Vertical") <= -0.01) {
+					selectedButton = (int)Mathf.Min (activeButtons.Length - 1, selectedButton + 1);
+					EventSystem.current.SetSelectedGameObject (activeButtons [selectedButton]);
+					verticalPress = true;
+				} 
+			} else if (Input.GetAxis("Vertical") == 0) {
+				verticalPress = false;
+			}
+
+		}
+	}
+
+	public IEnumerator TurnPage(){
+		page++;
+		currentPage.SetActive (false);
+		bookAnimator.SetTrigger ("Flip");
+		yield return new WaitForSecondsRealtime (0.2f);
+		yield return new WaitUntil(() => bookAnimator.GetCurrentAnimatorStateInfo (0).IsName ("BookOpen"));
+
+		if (page == 2) {
+			currentPage = page2;
+			page2.SetActive (true);
+			EventSystem.current.SetSelectedGameObject (endingButtons1 [0]);
+			selectedButton = 0;
+			activeButtons = endingButtons1;
+		} else if (page == 3) {
+			currentPage = page3;
+			page3.SetActive (true);
+			selectedButton = 0;
+			activeButtons = endingButtons2;
+			EventSystem.current.SetSelectedGameObject (endingButtons2 [0]);
+		}
+		flipping = false;
+		yield break;
+	}
+
+	public void Quit(){
+		Application.Quit ();
+	}
 		
+	public void ReturnToTitle(){
+		GameDriver.Instance.ReturnToTitle ();
+	}
+
+	public void Credits(){
+		flipping = true;
+		StartCoroutine ("TurnPage");
 	}
 }
