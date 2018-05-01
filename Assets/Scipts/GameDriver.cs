@@ -169,6 +169,13 @@ public class GameDriver : MonoBehaviour {
 		Destroy (this.gameObject);
 	}
 
+	public void ReturnToTitle(){
+		instance = null;
+		//TODO: Add scene name below and activate line
+		//SceneManager.LoadScene ("ThisScene", LoadSceneMode.Single);
+		Destroy(this.gameObject);
+	}
+
 	public void StartDialogue(){
 		gameState = GameState.Dialogue;
 		player.SetMovement (false);

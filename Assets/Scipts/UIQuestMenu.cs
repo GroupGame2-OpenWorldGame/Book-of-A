@@ -231,4 +231,17 @@ public class UIQuestMenu : MonoBehaviour {
 		flipping = false;
 		yield break;
 	}
+
+	public void Quit(){
+		Application.Quit ();
+	}
+
+	public void Resume(){
+		GameDriver.Instance.CloseQuestMenu ();
+	}
+
+	public void ReturnToTitle(){
+		GameDriver.Instance.ReturnToTitle ();
+	}
+
 }
