@@ -44,6 +44,8 @@ public class GameDriver : MonoBehaviour {
 	[Header("Quests")]
 	public UIQuestMenu questMenu;
 	public string questListPath;
+	public int questsForEnd = 10;
+	public GameObject lastNPC;
 	[Space(8)]
 
 	[Header("Game Over")]
@@ -123,7 +125,14 @@ public class GameDriver : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (flags.Contains ("EndGame") && !flags.Contains("InEnding")) {
+			flags.Add ("InEnding");
+			SceneManager.LoadScene ("Ending",LoadSceneMode.Single);
+		} else if (questsCompleted.Count >= questsForEnd) {
+			var ln = (GameObject)Instantiate (lastNPC, player.transform.position + (player.transform.forward * 2), Quaternion.identity);
+			ln.transform.LookAt (player.transform);
+			StartDialogue ();
+		}
 	}
 
 	public NPCScript NPCTarget{

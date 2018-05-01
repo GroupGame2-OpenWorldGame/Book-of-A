@@ -49,7 +49,8 @@ public class GameOver : MonoBehaviour {
 	}
 
 	public void ReturnToTitle(){
-		
+		//TODO: Add scene name below and activate line
+		//SceneManager.LoadScene ("GameScene", LoadSceneMode.Single);
 	}
 
 	public void Quit(){
