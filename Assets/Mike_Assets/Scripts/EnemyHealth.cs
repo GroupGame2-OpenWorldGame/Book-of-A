@@ -14,6 +14,9 @@ public class EnemyHealth : MonoBehaviour {
 	[SerializeField]
 	private GameObject playerZone;
 
+	public AgentMovement theAM;
+	public NPCMove theNM;
+
 	// Use this for initialization
 	void Start () {
 		currentHealth = maxHealth;
@@ -31,7 +34,14 @@ public class EnemyHealth : MonoBehaviour {
 			if (questEnemy) {
 				theQO.Collect ();
 			}
-			this.gameObject.SetActive (false);
+//			this.gameObject.SetActive (false);
+			if (theAM != null) {
+				theAM.Die ();
+			}
+			if (theNM != null) {
+				theNM.Die ();
+			}
+			playerZone.SetActive (false);
 		} else if (!aggressive && currentHealth < maxHealth) {
 			playerZone.SetActive (true);
 			aggressive = true;

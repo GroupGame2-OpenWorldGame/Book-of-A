@@ -13,6 +13,7 @@ public class AttackTrigger : MonoBehaviour {
 			if (attack) {
 				EnemyHealth theEH = other.GetComponentInParent<EnemyHealth> ();
 				theEH.HurtEnemy (theA.damage);
+				attack = false;
 			}
 		}
 

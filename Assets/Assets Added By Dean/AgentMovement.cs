@@ -6,6 +6,8 @@ using UnityEngine.Animations;
 
 public class AgentMovement : MonoBehaviour {
 
+	private AgentMovement thisScript;
+
 	[SerializeField]
 	private Transform destination; // Agent moves to 
 
@@ -43,8 +45,16 @@ public class AgentMovement : MonoBehaviour {
 
 	public Animator theAnimAI;
 
+	public bool attackingAnim;
+
 	// Use this for initialization
 	void Start () {
+		thisScript = this.GetComponent <AgentMovement> ();
+
+		if (player == null) {
+			player = GameObject.FindGameObjectWithTag ("Player");
+		}
+
 		navAgent = this.GetComponent<NavMeshAgent> ();  // get nav mesh component 
 
 		if (randomPatrol && !patroling) // makes sure patrolling is on if random patrolling is also on 
@@ -74,8 +84,14 @@ public class AgentMovement : MonoBehaviour {
 
 	void Update()
 	{
+		if (player == null) {
+			player = GameObject.FindGameObjectWithTag ("Player");
+		}
+
 		if (!seePlayer)  // check if you're following the player or navigating patrol points 
 		{
+			theAnimAI.SetBool ("Run", false);
+			theAnimAI.SetBool ("Attack", false);
 			if (isMovingTarget) 
 			{
 				SetDestination ();
@@ -100,16 +116,27 @@ public class AgentMovement : MonoBehaviour {
 					currentWaitTime = waitTime;
 				}
 			}
-		} else
-		
-		{
-			FollowPlayer ();
-		}
-
-		if (waiting) {
-			theAnimAI.SetBool ("Walk", false);
+			if (waiting) {
+				theAnimAI.SetBool ("Walk", false);
+			} else {
+				theAnimAI.SetBool ("Walk", true);
+			}
 		} else {
-			theAnimAI.SetBool ("Walk", true);
+			FollowPlayer ();
+			if (seePlayer) {
+//				theAnimAI.SetBool ("Walk", false);
+				theAnimAI.SetBool ("Run", true);
+			} else {
+				theAnimAI.SetBool ("Run", false);
+			}
+		} if (attackingAnim) {
+//			theAnimAI.SetBool ("Walk", false);
+//			theAnimAI.SetBool ("Run", false);
+			theAnimAI.SetBool ("Attack", true);
+			attackingAnim = false;
+//			theAnimAI.SetBool ("Attack", false);
+		} else {
+			theAnimAI.SetBool ("Attack", false);
 		}
 	}
 
@@ -157,5 +184,16 @@ public class AgentMovement : MonoBehaviour {
 	{
 		navAgent.SetDestination (player.transform.position);  // follow player if player is mean to be followed 
 		waiting = false;
+	}
+
+	public void Die()
+	{
+		theAnimAI.SetBool ("Walk", false);
+		theAnimAI.SetBool ("Run", false);
+		theAnimAI.SetBool ("Attack", false);
+		theAnimAI.SetBool ("Eat", false);
+		theAnimAI.SetBool ("Die", true);
+		this.GetComponent<SphereCollider> ().enabled = false;
+		thisScript.enabled = false;
 	}
 }
