@@ -184,6 +184,7 @@ public class GameDriver : MonoBehaviour {
 
 	public void StartDialogue(){
 		gameState = GameState.Dialogue;
+		Time.timeScale = 0f;
 		player.SetMovement (false);
 		/*
 		DeserializeXMLDialogue (npcTarget.dialogueXMLPath);
@@ -318,6 +319,7 @@ public class GameDriver : MonoBehaviour {
 	}
 
 	public void EndDialogue(){
+		Time.timeScale = 1f;
 		dialogueBox.SetActive (false);
 		gameState = GameState.OverWorld;
 		player.SetMovement (true);
