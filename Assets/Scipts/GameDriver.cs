@@ -17,7 +17,8 @@ public enum GameState{
 	OverWorld,
 	Dialogue,
 	QuestMenu,
-	GameOver
+	GameOver,
+	MainMenu
 }
 
 //TODO: Set Cursor LockStates later
@@ -83,15 +84,6 @@ public class GameDriver : MonoBehaviour {
 
 	public static GameDriver Instance{
 		get{
-			if (instance == null) {
-				instance = FindObjectOfType<GameDriver> ();
-				if (instance == null) {
-					var newGD = new GameObject ();
-					newGD.name = "GameDriver";
-					instance = newGD.AddComponent<GameDriver> ();
-					DontDestroyOnLoad (instance.gameObject);
-				}
-			}
 			return instance;
 		}
 	}
