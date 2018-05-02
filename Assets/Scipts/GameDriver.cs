@@ -90,7 +90,7 @@ public class GameDriver : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		Cursor.visible = false;
+		Cursor.visible = true;
 		if (instance != null) {
 			Destroy (this.gameObject);
 		} else {
@@ -328,7 +328,8 @@ public class GameDriver : MonoBehaviour {
 	public void SetCheck(string[] thingsToSet, string[] setTypes){
 		for (int i = 0; i < thingsToSet.Length; i++) {
 			if (setTypes [i].StartsWith ("quest", StringComparison.OrdinalIgnoreCase)) {
-				SetQuest (thingsToSet [i], setTypes [i].Split (',') [1], setTypes [i].Split (new char[','],3) [2]);
+				string splitString = ",";
+				SetQuest (thingsToSet [i], setTypes [i].Split (',') [1], setTypes [i].Split (splitString.ToCharArray(),3) [2]);
 			} else if (setTypes [i].StartsWith ("flag", StringComparison.OrdinalIgnoreCase)) {
 				SetFlag (thingsToSet [i], setTypes [i].Split (',') [1]);
 			} else if (setTypes [i].StartsWith ("object", StringComparison.OrdinalIgnoreCase)) {
