@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.ThirdPerson;
 using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerController : MonoBehaviour {
@@ -8,7 +9,8 @@ public class PlayerController : MonoBehaviour {
 	//public float speed = 1.0f;
 	//public float rotationFactor = 15.0f;
 
-	private FirstPersonController playerMovement;
+	private FirstPersonController playerFirstMovement;
+	private ThirdPersonCharacter playerThirdMovement;
 	private QuestObject questObjectTarget = null;
 	private bool inDialogueRange = false;
 	private bool inCollectRange = false;
@@ -16,10 +18,17 @@ public class PlayerController : MonoBehaviour {
 	private bool questKeyPressed = false;
 	private bool horizontalPressed = false;
 	private bool verticalPressed = false;
+	private bool firstPerson = false;
 
 	// Use this for initialization
 	void Start () {
-		playerMovement = gameObject.GetComponent<FirstPersonController> ();
+		if (gameObject.GetComponent<FirstPersonController> () != null) {
+			playerFirstMovement = gameObject.GetComponent<FirstPersonController> ();
+			firstPerson = true;
+		} else {
+			playerThirdMovement = gameObject.GetComponent<ThirdPersonCharacter> ();
+			firstPerson = false;
+		}
 	}
 	
 	// Update is called once per frame
@@ -121,7 +130,11 @@ public class PlayerController : MonoBehaviour {
 		
 
 	public void SetMovement(bool canMove){
-		playerMovement.enabled = canMove;
+		if (firstPerson) {
+			playerFirstMovement.enabled = canMove;
+		} else {
+			playerThirdMovement.enabled = canMove;
+		}
 	}
 
 	void OnTriggerEnter(Collider other){
