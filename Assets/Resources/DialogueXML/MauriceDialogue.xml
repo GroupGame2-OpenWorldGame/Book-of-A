@@ -1,0 +1,210 @@
+<DialogueHead>
+	<NPCName>Maurice</NPCName>
+	<FirstLineId>1</FirstLineId>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>1</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>flag,MountainTopAchived</value>
+		</ConditionsToCheck>
+		<TrueLineId>21</TrueLineId>
+		<FalseLineId>22</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>21</Id>
+		<Speaker>Maurcie</Speaker>
+		<Text>Thanks again.</Text>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>1</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>flag,TalkedToMaurice</value>
+		</ConditionsToCheck>
+		<TrueLineId>23</TrueLineId>
+		<FalseLineId>2</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueIfBranch">
+		<Id>23</Id>
+		<CheckType>AND</CheckType>
+		<ConditionsToCheck>
+			<value>flag,FailedMauriceQuest</value>
+		</ConditionsToCheck>
+		<TrueLineId></TrueLineId>
+		<FalseLineId>25</FalseLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>25</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>...</Text>
+		<NextLineId>5</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>2</Id>
+		<Speaker>Player</Speaker>
+		<Text>Hey, are you ok?</Text>
+		<SetWhenDone>
+			<value>TalkedToMaurice</value>
+			<value>MauriceQuest</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>quest,InProgress,</value>
+		</SetType>
+		<NextLineId>3</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>3</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>Oh, yes I'm fine...</Text>
+		<NextLineId>4</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>4</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>...</Text>
+		<NextLineId>5</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueOption">
+		<Id>5</Id>
+		<Speaker>Player</Speaker>
+		<Text>...</Text>
+		<Options>
+			<value>Console</value>
+			<value>Leave</value>
+		</Options>
+		<DecisionLineIds>
+			<value>6</value>
+			<value>24</value>
+		</DecisionLineIds>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>24</Id>
+		<Speaker>Player</Speaker>
+		<Text>Ok...see you around.</Text>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>6</Id>
+		<Speaker>Player</Speaker>
+		<Text>You seem distressed. Is there anything you want to talk about?</Text>
+		<NextLineId>7</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>7</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>...</Text>
+		<NextLineId>8</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>8</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>Oh! sorry.</Text>
+		<NextLineId>9</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>9</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>I haven't been able to focus very much since my wife passed away.</Text>
+		<NextLineId>10</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>10</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>We used to come up here in our youth to watch the sunset, but we stoped after her health started to fail.</Text>
+		<NextLineId>11</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>11</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>I was planning to bring her up here one last time...but it seems fate didn't want that.</Text>
+		<NextLineId>12</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueOption">
+		<Id>12</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>I'm a failure, aren't I?</Text>
+		<Options>
+			<value>Agree</value>
+			<value>Comfort</value>
+		</Options>
+		<DecisionLineIds>
+			<value>26</value>
+			<value>13</value>
+		</DecisionLineIds>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>26</Id>
+		<Speaker>Player</Speaker>
+		<Text>Yeah, you failure. What kind of husband can't get his wife up a hill?</Text>
+		<NextLineId>27</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>27</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>...</Text>
+		<SetWhenDone>
+			<value>FailedMauriceQuest</value>
+			<value>MauriceQuest</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>quest,Failed,Maurice is now even more depressed, no thanks to you.</value>
+		</SetType>
+		<NextLineId>28</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>13</Id>
+		<Speaker>Player</Speaker>
+		<Text>You know that's not true; your wife would even tell you so.</Text>
+		<NextLineId>14</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>14</Id>
+		<Speaker>Player</Speaker>
+		<Text>Besides, you still made it up here yourself, didn't you? Don't you think that, in and of itself, would make her happy?</Text>
+		<NextLineId>15</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>15</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>I never quite thought of it that way. Perhaps your right.</Text>
+		<NextLineId>16</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>16</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>Thank you. I think I'll be heading home now.</Text>
+		<NextLineId>17</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>17</Id>
+		<Speaker>Player</Speaker>
+		<Text>No ploblem.</Text>
+		<NextLineId>18</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>18</Id>
+		<Speaker>Player</Speaker>
+		<Text>...Actually, would you mind doing me a favor?</Text>
+		<NextLineId>19</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>19/Id>
+		<Speaker>Player</Speaker>
+		<Text>Could you stay here for a bit longer and keep an eye out for anything?</Text>
+		<NextLineId>20</NextLineId>
+	</DialogueElement>
+	<DialogueElement Type="DialogueLine">
+		<Id>20</Id>
+		<Speaker>Maurice</Speaker>
+		<Text>That's an odd request, but yes, I can certainly do that for you.</Text>
+		<SetWhenDone>
+			<value>MountainTopAchived</value>
+			<value>MauriceQuest</value>
+		</SetWhenDone>
+		<SetType>
+			<value>flag,true</value>
+			<value>quest,Success,Now that Maurcie has been cheered up, he will keep watch on the mountain for you.</value>
+		</SetType>
+	</DialogueElement>
+</DialogueHead>
