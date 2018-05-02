@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour {
 
 	private FirstPersonController playerMovement;
 	private QuestObject questObjectTarget = null;
-	private GameDriver gameDriver;
 	private bool inDialogueRange = false;
 	private bool inCollectRange = false;
 	private bool selectKeyPressed =false;
@@ -20,7 +19,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gameDriver = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameDriver> ();
 		playerMovement = gameObject.GetComponent<FirstPersonController> ();
 	}
 	
@@ -46,12 +44,12 @@ public class PlayerController : MonoBehaviour {
 				verticalPressed = false;
 			}
 		}
-		switch (gameDriver.gameState) {
+		switch (GameDriver.Instance.gameState) {
 		case GameState.OverWorld:
 			if (Input.GetAxis ("Select") != 0 && !selectKeyPressed) {
 				selectKeyPressed = true;
 				if (inDialogueRange) {
-					gameDriver.StartDialogue ();
+					GameDriver.Instance.StartDialogue ();
 				} else if (inCollectRange) {
 					questObjectTarget.Collect ();
 				}
@@ -60,7 +58,7 @@ public class PlayerController : MonoBehaviour {
 				
 			if (Input.GetAxis ("QuestMenu") != 0 && !questKeyPressed) {
 				questKeyPressed = true;
-				gameDriver.OpenQuestMenu();
+				GameDriver.Instance.OpenQuestMenu();
 				break;
 			}
 			break;
@@ -68,10 +66,10 @@ public class PlayerController : MonoBehaviour {
 		case GameState.Dialogue:
 			if (!horizontalPressed) {
 				if (Input.GetAxisRaw ("Horizontal") > 0.001) {
-					gameDriver.ChangeHoveredOption (1);
+					GameDriver.Instance.ChangeHoveredOption (1);
 					horizontalPressed = true;
 				} else if (Input.GetAxisRaw ("Horizontal") < -0.001) {
-					gameDriver.ChangeHoveredOption (-1);
+					GameDriver.Instance.ChangeHoveredOption (-1);
 					horizontalPressed = true;
 				}
 			} else if(Input.GetAxisRaw("Horizontal") == 0){
@@ -81,7 +79,7 @@ public class PlayerController : MonoBehaviour {
 			if (!selectKeyPressed) {
 				if (Input.GetAxisRaw ("Select") > 0) {
 					selectKeyPressed = true;
-					gameDriver.AdvanceDialogue ();
+					GameDriver.Instance.AdvanceDialogue ();
 				}
 			} 
 			break;
@@ -91,7 +89,7 @@ public class PlayerController : MonoBehaviour {
 				if (Input.GetAxisRaw ("QuestMenu") != 0) {
 					if (!questKeyPressed) {
 						questKeyPressed = true;
-						gameDriver.CloseQuestMenu ();
+						GameDriver.Instance.CloseQuestMenu ();
 						break;
 					}
 				}
@@ -128,7 +126,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag == "NPC") {
-			gameDriver.NPCTarget = other.gameObject.GetComponent<NPCScript> ();
+			GameDriver.Instance.NPCTarget = other.gameObject.GetComponent<NPCScript> ();
 			inDialogueRange = true;
 		}
 		if (other.gameObject.tag == "QuestItem") {
@@ -139,7 +137,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerExit(Collider other){
 		if (other.gameObject.tag == "NPC") {
-			if (other.gameObject.GetComponent<NPCScript> () == gameDriver.NPCTarget) {
+			if (other.gameObject.GetComponent<NPCScript> () == GameDriver.Instance.NPCTarget) {
 				inDialogueRange = false;
 			}
 		}

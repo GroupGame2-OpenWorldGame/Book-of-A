@@ -203,8 +203,8 @@ public class GameDriver : MonoBehaviour {
 		}
 		*/
 		if (npcTarget != null) {
-			if (npcTarget.dialogueHead != null) {
-				currentDialogue = npcTarget.dialogueHead;
+			if (npcTarget.dialogueXMLPath != null) {
+				currentDialogue = DeserializeXMLDialogueLinq(npcTarget.dialogueXMLPath);
 				currentLine = currentDialogue.FindLineById (currentDialogue.FirstLineId);
 				npcImage.sprite = npcTarget.portrait;
 				dialogueBox.SetActive (true);
